@@ -1,0 +1,44 @@
+[
+  {
+    "id": "duomo-faq-1",
+    "museumId": "duomo-florence",
+    "question": "Do I need to book Duomo Florence and Dome climb tickets in advance?",
+    "answer": "<p>Yes, absolutely. Brunelleschi's Dome climb has strict capacity limits and mandatory timed entry reservations. Tickets frequently sell out 2 to 4 weeks in advance during peak season (April through October).</p>",
+    "category": "Tickets & Booking"
+  },
+  {
+    "id": "duomo-faq-2",
+    "museumId": "duomo-florence",
+    "question": "How many steps is the climb to the top of Brunelleschi's Dome?",
+    "answer": "<p>There are exactly 463 steps to reach the lantern at the top of the Dome. There is no elevator. The climb winds through narrow corridors between the inner and outer shells of the dome, offering close-up views of Vasari's 'Last Judgment' frescoes before emerging at the panoramic rooftop terrace.</p>",
+    "category": "Visitor Experience"
+  },
+  {
+    "id": "duomo-faq-3",
+    "museumId": "duomo-florence",
+    "question": "Is there a dress code for entering Santa Maria del Fiore Cathedral?",
+    "answer": "<p>Yes. Santa Maria del Fiore is an active place of Roman Catholic worship. Modest attire is strictly required: shoulders and knees must be covered for both men and women. Tank tops, shorts above the knee, and hats are not permitted inside.</p>",
+    "category": "Guidelines"
+  },
+  {
+    "id": "uffizi-faq-1",
+    "museumId": "uffizi-gallery",
+    "question": "How long does a visit to the Uffizi Gallery take?",
+    "answer": "<p>Most visitors spend between 2.5 to 3.5 hours exploring the Uffizi's permanent collections. With over 45 exhibition rooms, planning ahead and focusing on key masterpieces like Botticelli, Da Vinci, and Michelangelo ensures a rewarding visit.</p>",
+    "category": "Planning"
+  },
+  {
+    "id": "uffizi-faq-2",
+    "museumId": "uffizi-gallery",
+    "question": "Is the Uffizi Gallery closed on Mondays?",
+    "answer": "<p>Yes, the Uffizi Gallery is closed every Monday, as well as on December 25th and January 1st. It is open Tuesday through Sunday from 8:15 AM to 6:30 PM.</p>",
+    "category": "Hours"
+  },
+  {
+    "id": "accademia-faq-1",
+    "museumId": "accademia-gallery",
+    "question": "Is Michelangelo's David in the Uffizi or the Accademia?",
+    "answer": "<p>The original, world-famous marble statue of David by Michelangelo is housed in Galleria dell'Accademia (Via Ricasoli). A replica statue stands outside Palazzo Vecchio in Piazza della Signoria, and a bronze replica overlooks the city from Piazzale Michelangelo.</p>",
+    "category": "General"
+  }
+]

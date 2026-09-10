@@ -1,0 +1,550 @@
+[
+  {
+    "id": "duomo-florence",
+    "slug": "duomo-florence-tickets",
+    "name": "Duomo Florence",
+    "city": "Florence",
+    "country": "Italy",
+    "currencySymbol": "€",
+    "lat": 43.7731,
+    "lng": 11.256,
+    "sortOrder": 0,
+    "featured": true,
+    "rating": 4.9,
+    "reviewsCount": "18.4k",
+    "cardImage": "https://images.unsplash.com/photo-1541370976299-4d20eb3460f6?q=80&w=1200&auto=format&fit=crop",
+    "cardImageAlt": "Duomo Florence Santa Maria del Fiore Cathedral and Dome",
+    "cardTagline": "Climb Brunelleschi's iconic dome and explore Florence's monumental Gothic cathedral.",
+    "heroBadge": "FLORENCE · TICKETS & TOURS",
+    "heroHeading": "Duomo Florence Tickets & Brunelleschi Dome Climb",
+    "heroSubheading": "<p>Experience Santa Maria del Fiore, one of the world's most breathtaking architectural achievements. Ascend the 463 steps of Brunelleschi's Dome for panoramic views across Florence and Tuscany.</p>",
+    "heroImage": "https://images.unsplash.com/photo-1541370976299-4d20eb3460f6?q=80&w=1600&auto=format&fit=crop",
+    "heroImageAlt": "Florence Cathedral Brunelleschi's Dome bathed in sunlight",
+    "highlightsEyebrow": "Types of Passes",
+    "highlightsHeading": "Types of Duomo Florence Tickets & Passes",
+    "highlightsSubheading": "The Cathedral complex offers specialized passes and guided climb options covering all 5 monumental areas.",
+    "highlights": [
+      {
+        "icon": "🏛️",
+        "title": "Brunelleschi Pass",
+        "body": "All-access pass: Dome Climb (463 steps), Giotto's Bell Tower, Baptistery of San Giovanni, Opera del Duomo Museum, and Santa Reparata Crypt."
+      },
+      {
+        "icon": "🔔",
+        "title": "Giotto Pass",
+        "body": "Includes Giotto's Campanile (414 steps), Baptistery, Museum, and Crypt — ideal if you want panoramic views without the Dome climb."
+      },
+      {
+        "icon": "✨",
+        "title": "Ghiberti Pass",
+        "body": "Explores the ground monuments: Baptistery, Opera del Duomo Museum, and ancient Santa Reparata crypt ruins."
+      },
+      {
+        "icon": "🎨",
+        "title": "Guided Dome Tour",
+        "body": "Fast-track skip-the-line entrance with an expert art historian guide, including exclusive access and historical commentary."
+      }
+    ],
+    "aboutHeading": "Things to Do at Duomo Florence",
+    "aboutBody": "<p>The Cathedral of Santa Maria del Fiore stands as the crown jewel of Florence. Climb 463 steps to reach the highest point in central Florence atop Brunelleschi's revolutionary double-shell dome; gaze upward at Giorgio Vasari and Federico Zuccari's monumental fresco of <em>The Last Judgment</em>; marvel at Lorenzo Ghiberti's gilded bronze <em>Gates of Paradise</em> at the Baptistery; and admire Michelangelo's unfinished <em>Bandini Pietà</em> in the state-of-the-art Opera del Duomo Museum.</p>",
+    "toursEyebrow": "Explore & Book",
+    "toursHeading": "Duomo Florence Tickets & Guided Dome Climb Tours",
+    "toursSubheading": "Book verified skip-the-line passes, priority cathedral entry, and expert-led Renaissance tours.",
+    "practicalHoursHeading": "Opening Hours",
+    "practicalHours": [
+      {
+        "range": "Brunelleschi's Dome",
+        "time": "8:15 AM – 7:30 PM (Mandatory timed slot)"
+      },
+      {
+        "range": "Cathedral Nave",
+        "time": "10:15 AM – 4:30 PM (Closed Sundays for religious service)"
+      },
+      {
+        "range": "Giotto's Bell Tower",
+        "time": "8:15 AM – 7:45 PM"
+      },
+      {
+        "range": "Baptistery & Opera Museum",
+        "time": "9:00 AM – 7:45 PM"
+      }
+    ],
+    "practicalHoursNote": "Dome climb requires strict timed-entry reservation. Passes remain valid for 72 consecutive hours from first activation.",
+    "practicalAddressHeading": "How to Reach?",
+    "practicalAddress": "Piazza del Duomo, 50122 Firenze FI, Italy.",
+    "practicalGettingThere": "Located in the heart of historic Florence. An easy 8-minute walk from Firenze Santa Maria Novella (SMN) railway station.",
+    "practicalBestTimeHeading": "Tickets & Practical Tips",
+    "practicalBestTimeBody": "<p>Brunelleschi Pass prices start from €30 for standard access up to €49 for guided fast-track tours. Modest dress code is strictly enforced: shoulders and knees must remain covered to enter the cathedral and religious sites.</p>",
+    "priceEyebrow": "Pass Comparison",
+    "priceHeading": "Duomo Florence Ticket Pricing",
+    "priceSubheading": "Compare skip-the-line passes and expert guided climbs.",
+    "priceNote": "Free cancellation available up to 24 hours prior on verified partner bookings.",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Frequently Asked Questions",
+    "ctaHeading": "Ready to climb Brunelleschi's Dome?",
+    "ctaSubtext": "Secure your guaranteed timed-entry tickets now and avoid sold-out slots in Florence.",
+    "ctaButtonText": "Book Duomo Florence Tickets",
+    "nearbyHeadingOverride": "Nearby Attractions in Florence",
+    "metaTitle": "Duomo Florence Tickets | Brunelleschi Dome Climb | Discover Florence",
+    "metaDescription": "Book verified Duomo Florence tickets with Brunelleschi Dome climb access. Skip the line for Santa Maria del Fiore cathedral, Giotto's tower, and Baptistery.",
+    "focusKeyword": "Discover Florence | Duomo Florence",
+    "canonicalUrl": "https://www.discover-florence.com/duomo-florence-tickets",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "Duomo Florence Tickets | Brunelleschi Dome Climb Access",
+    "ogDescription": "Book verified Duomo Florence tickets with Brunelleschi Dome climb access. Skip the line for Santa Maria del Fiore cathedral in Florence.",
+    "ogImage": "https://images.unsplash.com/photo-1541370976299-4d20eb3460f6?q=80&w=1600&auto=format&fit=crop",
+    "createdAt": "2026-09-01T00:00:00.000Z",
+    "updatedAt": "2026-09-01T00:00:00.000Z"
+  },
+  {
+    "id": "uffizi-gallery",
+    "slug": "uffizi-gallery-tickets",
+    "name": "Uffizi Gallery",
+    "city": "Florence",
+    "country": "Italy",
+    "currencySymbol": "€",
+    "lat": 43.768875,
+    "lng": 11.255353,
+    "sortOrder": 1,
+    "featured": true,
+    "rating": 4.8,
+    "reviewsCount": "16.2k",
+    "cardImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?q=80&w=1200&auto=format&fit=crop",
+    "cardImageAlt": "Uffizi Gallery Florence grand renaissance corridor",
+    "cardTagline": "See Botticelli's Birth of Venus, Michelangelo and Renaissance masterpieces in one of the world's greatest art museums.",
+    "heroBadge": "FLORENCE · TICKETS & TOURS",
+    "heroHeading": "Uffizi Gallery Tickets & Guided Tours",
+    "heroSubheading": "<p>Discover the birthplace of the Italian Renaissance. The Uffizi Gallery houses the world's most priceless collection of Renaissance masterpieces by Botticelli, Leonardo da Vinci, Michelangelo, and Raphael.</p>",
+    "heroImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?q=80&w=1600&auto=format&fit=crop",
+    "heroImageAlt": "Uffizi Gallery art museum hall",
+    "highlightsEyebrow": "Masterpieces",
+    "highlightsHeading": "Highlights of the Uffizi Gallery",
+    "highlightsSubheading": "Explore iconic paintings and classical Roman sculptures collected by the Medici family.",
+    "highlights": [
+      {
+        "icon": "🐚",
+        "title": "The Birth of Venus",
+        "body": "Sandro Botticelli's legendary tempera masterpiece depicting the goddess Venus emerging from the sea foam."
+      },
+      {
+        "icon": "🌸",
+        "title": "Botticelli's Primavera",
+        "body": "An enchanting allegorical depiction of Spring featuring Flora, Mercury, and the Three Graces in an orange grove."
+      },
+      {
+        "icon": "🎨",
+        "title": "Leonardo da Vinci Room",
+        "body": "Home to Da Vinci's masterworks including the Annunciation and the mesmerizing Adoration of the Magi."
+      },
+      {
+        "icon": "🏛️",
+        "title": "The Tribune & Grand Corridors",
+        "body": "The octagonal Tribune encrusted with mother-of-pearl and corridors framed by Roman marble statuary."
+      }
+    ],
+    "aboutHeading": "Things to Do at Uffizi Gallery",
+    "aboutBody": "<p>The Uffizi Gallery, designed by Giorgio Vasari in 1560 for Grand Duke Cosimo I de' Medici, is a temple of fine arts. Admire Caravaggio's dramatic <em>Medusa</em>, Michelangelo's <em>Doni Tondo</em>, Titian's <em>Venus of Urbino</em>, and Raphael's <em>Madonna of the Goldfinch</em>. Enjoy sweeping views of Ponte Vecchio and the Arno River from the second-floor windows, then stop by the rooftop terrace café overlooking Piazza della Signoria.</p>",
+    "toursEyebrow": "Explore & Book",
+    "toursHeading": "Uffizi Gallery Skip-the-Line Tickets & Tours",
+    "toursSubheading": "Choose timed priority admission, small-group guided tours, or Uffizi + Accademia combination passes.",
+    "practicalHoursHeading": "Opening Hours",
+    "practicalHours": [
+      {
+        "range": "Tuesday – Sunday",
+        "time": "8:15 AM – 6:30 PM (Last entry 5:30 PM)"
+      },
+      {
+        "range": "Mondays, Dec 25, Jan 1",
+        "time": "Closed"
+      }
+    ],
+    "practicalHoursNote": "Closed every Monday. Booking timed skip-the-line tickets in advance is strictly required to avoid 2-3 hour queues.",
+    "practicalAddressHeading": "How to Reach?",
+    "practicalAddress": "Piazzale degli Uffizi 6, 50122 Firenze FI, Italy.",
+    "practicalGettingThere": "Located adjacent to Piazza della Signoria and Palazzo Vecchio. A quick 5-minute walk from the Duomo and 12 minutes from SMN station.",
+    "practicalBestTimeHeading": "Tickets Price & Entry",
+    "practicalBestTimeBody": "<p>Priority timed entry tickets start at €26. Free admission is granted to EU youth under 18 with valid government ID. Early morning (8:15 AM) and late afternoon (after 3:30 PM) offer the most peaceful atmosphere.</p>",
+    "priceEyebrow": "Pricing",
+    "priceHeading": "Uffizi Gallery Ticket Prices",
+    "priceSubheading": "Compare skip-the-line tickets and small-group guided experiences.",
+    "priceNote": "All tickets include full access to permanent collections and temporary exhibitions.",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Frequently Asked Questions",
+    "ctaHeading": "Ready to visit the Uffizi Gallery?",
+    "ctaSubtext": "Reserve your fast-track admission today and explore Botticelli's masterpieces in Florence.",
+    "ctaButtonText": "Book Uffizi Tickets Now",
+    "nearbyHeadingOverride": "Nearby Attractions in Florence",
+    "metaTitle": "Uffizi Gallery Tickets & Guided Tour | Discover Florence",
+    "metaDescription": "Book Uffizi Gallery tickets in Florence with skip-the-line priority entry. See Botticelli's Birth of Venus, Leonardo da Vinci, and Michelangelo.",
+    "focusKeyword": "Discover Florence | Duomo Florence",
+    "canonicalUrl": "https://www.discover-florence.com/uffizi-gallery-tickets",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "Uffizi Gallery Tickets & Tour | Skip The Line",
+    "ogDescription": "Explore Uffizi Gallery tickets and guided tours in Florence. See Botticelli's Birth of Venus and Renaissance art masterpieces.",
+    "ogImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?q=80&w=1600&auto=format&fit=crop",
+    "createdAt": "2026-09-01T00:00:00.000Z",
+    "updatedAt": "2026-09-01T00:00:00.000Z"
+  },
+  {
+    "id": "accademia-gallery",
+    "slug": "accademia-gallery-tickets",
+    "name": "Accademia Gallery",
+    "city": "Florence",
+    "country": "Italy",
+    "currencySymbol": "€",
+    "lat": 43.7769,
+    "lng": 11.2588,
+    "sortOrder": 2,
+    "featured": true,
+    "rating": 4.8,
+    "reviewsCount": "13.9k",
+    "cardImage": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200&auto=format&fit=crop",
+    "cardImageAlt": "Michelangelo David statue in Galleria dell'Accademia Florence",
+    "cardTagline": "Stand in front of Michelangelo's David and discover Florence's artistic heritage.",
+    "heroBadge": "FLORENCE · TICKETS & TOURS",
+    "heroHeading": "Accademia Gallery Tickets & Michelangelo's David",
+    "heroSubheading": "<p>Marvel at the pinnacle of Renaissance sculpture. Stand beneath the skylight of the Tribune and behold Michelangelo's world-famous marble statue of David in all its majestic detail.</p>",
+    "heroImage": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1600&auto=format&fit=crop",
+    "heroImageAlt": "Michelangelo's David marble sculpture",
+    "highlightsEyebrow": "Highlights",
+    "highlightsHeading": "Top Treasures of Galleria dell'Accademia",
+    "highlightsSubheading": "Discover Michelangelo's greatest sculptures and precious Renaissance instruments.",
+    "highlights": [
+      {
+        "icon": "🗿",
+        "title": "Michelangelo's David",
+        "body": "Carved from a single block of Carrara marble between 1501 and 1504, standing over 5 meters tall."
+      },
+      {
+        "icon": "⛓️",
+        "title": "Hall of the Prisoners (Slaves)",
+        "body": "Four unfinished marble statues demonstrating Michelangelo's non-finito technique of liberating figures from stone."
+      },
+      {
+        "icon": "🎻",
+        "title": "Museum of Musical Instruments",
+        "body": "The Medici and Lorraine court collection including the world's oldest surviving Stradivari violin."
+      },
+      {
+        "icon": "🖼️",
+        "title": "Gothic & Renaissance Paintings",
+        "body": "Extensive gold-ground altarpieces by Giotto, Orcagna, Botticelli, and Domenico Ghirlandaio."
+      }
+    ],
+    "aboutHeading": "Things to Do at Accademia Gallery",
+    "aboutBody": "<p>Galleria dell'Accademia was founded in 1784 by Grand Duke Peter Leopold of Lorraine as a teaching facility for students of the Academy of Fine Arts. The undisputed centerpiece is Michelangelo's David, moved here from Piazza della Signoria in 1873 to protect it from weather damage. Walk through the Hall of the Colossus, examine Giambologna's plaster model for the <em>Rape of the Sabine Women</em>, and admire the collection of historical musical instruments.</p>",
+    "toursEyebrow": "Explore & Book",
+    "toursHeading": "Accademia Gallery Tickets & Guided Highlights Tours",
+    "toursSubheading": "Secure fast-track timed entrance or join an art historian for an inspiring tour of David.",
+    "practicalHoursHeading": "Opening Hours",
+    "practicalHours": [
+      {
+        "range": "Tuesday – Sunday",
+        "time": "8:15 AM – 6:50 PM (Last entry 6:20 PM)"
+      },
+      {
+        "range": "Mondays, Dec 25, Jan 1",
+        "time": "Closed"
+      }
+    ],
+    "practicalHoursNote": "Closed Mondays. Advance reservation is mandatory to guarantee entry.",
+    "practicalAddressHeading": "How to Reach?",
+    "practicalAddress": "Via Ricasoli 58/60, 50122 Firenze FI, Italy.",
+    "practicalGettingThere": "Situated between Piazza San Marco and Piazza del Duomo, a brief 5-minute stroll north from Florence Cathedral.",
+    "practicalBestTimeHeading": "Tickets Price & Info",
+    "practicalBestTimeBody": "<p>Timed priority tickets start from €20. Combo tickets with the Uffizi Gallery provide a discounted rate for Florence's two premier museums.</p>",
+    "priceEyebrow": "Pricing",
+    "priceHeading": "Accademia Gallery Ticket Options",
+    "priceSubheading": "Compare skip-the-line passes and small-group guided tours.",
+    "priceNote": "Free cancellation available up to 24 hours before your visit.",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Frequently Asked Questions",
+    "ctaHeading": "Ready to see Michelangelo's David?",
+    "ctaSubtext": "Book your priority tickets in advance and skip the line at Galleria dell'Accademia.",
+    "ctaButtonText": "Book Accademia Tickets Now",
+    "nearbyHeadingOverride": "Nearby Attractions in Florence",
+    "metaTitle": "Accademia Gallery Tickets & Guided Tour | Discover Florence",
+    "metaDescription": "Book skip-the-line Accademia Gallery tickets in Florence. Stand in front of Michelangelo's original David statue and the Hall of Prisoners.",
+    "focusKeyword": "Discover Florence | Duomo Florence",
+    "canonicalUrl": "https://www.discover-florence.com/accademia-gallery-tickets",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "Accademia Gallery Tickets | Michelangelo's David",
+    "ogDescription": "Stand in front of Michelangelo's David and discover Florence's artistic heritage at Galleria dell'Accademia.",
+    "ogImage": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1600&auto=format&fit=crop",
+    "createdAt": "2026-09-01T00:00:00.000Z",
+    "updatedAt": "2026-09-01T00:00:00.000Z"
+  },
+  {
+    "id": "ponte-vecchio",
+    "slug": "ponte-vecchio-florence",
+    "name": "Ponte Vecchio",
+    "city": "Florence",
+    "country": "Italy",
+    "currencySymbol": "€",
+    "lat": 43.768,
+    "lng": 11.2531,
+    "sortOrder": 3,
+    "featured": false,
+    "rating": 4.7,
+    "reviewsCount": "22.5k",
+    "cardImage": "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1200&auto=format&fit=crop",
+    "cardImageAlt": "Ponte Vecchio bridge over Arno river in Florence",
+    "cardTagline": "Historic medieval stone closed-spandrel arch bridge lined with artisan jewelry shops.",
+    "heroBadge": "FLORENCE · ICONIC LANDMARK",
+    "heroHeading": "Ponte Vecchio Florence Tours & History",
+    "heroSubheading": "<p>Florence's most romantic landmark. Built in 1345, the historic Ponte Vecchio is renowned for its charming goldsmith shops and the elevated Vasari Corridor connecting Palazzo Vecchio to Pitti Palace.</p>",
+    "heroImage": "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1600&auto=format&fit=crop",
+    "heroImageAlt": "Ponte Vecchio Florence at sunset",
+    "highlightsEyebrow": "Highlights",
+    "highlightsHeading": "What Makes Ponte Vecchio Special",
+    "highlightsSubheading": "Discover the medieval bridge that survived World War II and the Great Flood of 1966.",
+    "highlights": [
+      {
+        "icon": "💎",
+        "title": "Goldsmiths & Jewelers",
+        "body": "Since Grand Duke Ferdinand I banished butchers in 1593, only goldsmiths and jewelers have traded on the bridge."
+      },
+      {
+        "icon": "🏛️",
+        "title": "Vasari Corridor",
+        "body": "The secret enclosed walkway built above the shops so the Medici rulers could walk undisturbed."
+      },
+      {
+        "icon": "🌅",
+        "title": "Sunset over the Arno",
+        "body": "The central viewing arcade offers the most photographed sunset panoramas in Florence."
+      },
+      {
+        "icon": "🗿",
+        "title": "Benvenuto Cellini Monument",
+        "body": "Bronze bust honoring Florence's most celebrated 16th-century master goldsmith."
+      }
+    ],
+    "aboutHeading": "Exploring Ponte Vecchio",
+    "aboutBody": "<p>Ponte Vecchio ('Old Bridge') is the oldest stone bridge in Europe of its kind. As the only bridge in Florence spared from destruction by retreating German forces during WWII, it remains an eternal testament to Florence's resilient heritage. Take an Arno river cruise to view its arches from the water, or join a walking tour through the Oltrarno district.</p>",
+    "toursEyebrow": "Explore & Book",
+    "toursHeading": "Ponte Vecchio & Arno River Walking Tours",
+    "toursSubheading": "Experience guided walking tours, Arno riverboat cruises, and sunset photography tours.",
+    "practicalHoursHeading": "Opening Hours",
+    "practicalHours": [
+      {
+        "range": "Bridge Access",
+        "time": "Open 24/7 (Free public access)"
+      },
+      {
+        "range": "Jewelry Shops",
+        "time": "10:00 AM – 7:00 PM (Monday – Saturday)"
+      }
+    ],
+    "practicalHoursNote": "Pedestrian only. Free to walk across at any hour of day or night.",
+    "practicalAddressHeading": "Location",
+    "practicalAddress": "Ponte Vecchio, 50125 Firenze FI, Italy.",
+    "practicalGettingThere": "Spans the Arno river connecting Piazza del Duomo / Uffizi to the bohemian Oltrarno quarter.",
+    "practicalBestTimeHeading": "Best Time to Visit",
+    "practicalBestTimeBody": "<p>Visit early morning for quiet walks before crowds arrive, or at golden hour sunset when the pastel facades glow over the water.</p>",
+    "priceEyebrow": "Tours",
+    "priceHeading": "Florence Walking & River Tours",
+    "priceSubheading": "Guided walking tours including Ponte Vecchio and Oltrarno.",
+    "priceNote": "Free cancellation available.",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Frequently Asked Questions",
+    "ctaHeading": "Ready to explore Florence's iconic bridge?",
+    "ctaSubtext": "Book a guided Florence walking tour and discover the secrets of Ponte Vecchio.",
+    "ctaButtonText": "Book Florence Walking Tour",
+    "nearbyHeadingOverride": "Nearby Attractions in Florence",
+    "metaTitle": "Ponte Vecchio Florence Guide & Walking Tours | Discover Florence",
+    "metaDescription": "Explore Ponte Vecchio in Florence: history, jewelry shops, Vasari Corridor, and guided walking tours over the Arno River.",
+    "focusKeyword": "Discover Florence | Duomo Florence",
+    "canonicalUrl": "https://www.discover-florence.com/ponte-vecchio-florence",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "Ponte Vecchio Florence | History & Walking Tours",
+    "ogDescription": "Explore Ponte Vecchio in Florence: historic medieval bridge with jewelry shops and the Vasari Corridor.",
+    "ogImage": "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1600&auto=format&fit=crop",
+    "createdAt": "2026-09-01T00:00:00.000Z",
+    "updatedAt": "2026-09-01T00:00:00.000Z"
+  },
+  {
+    "id": "palazzo-vecchio",
+    "slug": "palazzo-vecchio-florence",
+    "name": "Palazzo Vecchio",
+    "city": "Florence",
+    "country": "Italy",
+    "currencySymbol": "€",
+    "lat": 43.7694,
+    "lng": 11.2562,
+    "sortOrder": 4,
+    "featured": false,
+    "rating": 4.7,
+    "reviewsCount": "9.8k",
+    "cardImage": "https://images.unsplash.com/photo-1543429776-0683050964eb?q=80&w=1200&auto=format&fit=crop",
+    "cardImageAlt": "Palazzo Vecchio and Piazza della Signoria in Florence",
+    "cardTagline": "Florence's medieval town hall fortress, Salone dei Cinquecento, and the 95m Arnolfo Tower.",
+    "heroBadge": "FLORENCE · TICKETS & TOURS",
+    "heroHeading": "Palazzo Vecchio Tickets & Arnolfo Tower",
+    "heroSubheading": "<p>Step inside Florence's imposing fortress-palace. Gaze upon the magnificent Salone dei Cinquecento decorated by Vasari and climb the 95-meter Arnolfo Tower for unmatched views of the Duomo.</p>",
+    "heroImage": "https://images.unsplash.com/photo-1543429776-0683050964eb?q=80&w=1600&auto=format&fit=crop",
+    "heroImageAlt": "Palazzo Vecchio tower in Piazza della Signoria",
+    "highlightsEyebrow": "Highlights",
+    "highlightsHeading": "Treasures of Palazzo Vecchio",
+    "highlightsSubheading": "Explore the seat of civic power of the Florentine Republic and Medici Grand Dukes.",
+    "highlights": [
+      {
+        "icon": "⚔️",
+        "title": "Salone dei Cinquecento",
+        "body": "The cavernous Hall of the Five Hundred featuring monumental battle frescoes and Michelangelo's Genius of Victory."
+      },
+      {
+        "icon": "🏰",
+        "title": "Arnolfo Tower Climb",
+        "body": "Ascend 223 steps up the medieval crenellated tower for a direct eye-level perspective of Brunelleschi's Dome."
+      },
+      {
+        "icon": "🗝️",
+        "title": "Secret Passages Tour",
+        "body": "Guided access through hidden staircases, the Duke of Athens' staircase, and the trussed ceiling above the Salone."
+      },
+      {
+        "icon": "👑",
+        "title": "Medici Monumental Apartments",
+        "body": "Lavish private chambers of Eleonora di Toledo and Cosimo I decorated with exquisite Renaissance frescoes."
+      }
+    ],
+    "aboutHeading": "Inside Palazzo Vecchio",
+    "aboutBody": "<p>Overlooking Piazza della Signoria, Palazzo Vecchio has served as the political nerve center of Florence since 1299. Today it functions as both the city hall and an extraordinary public museum. Marvel at Donatello's bronze <em>Judith and Holofernes</em>, explore the Hall of Geographical Maps with its massive terrestrial globe, and walk the fortress battlements.</p>",
+    "toursEyebrow": "Explore & Book",
+    "toursHeading": "Palazzo Vecchio Museum & Tower Climb Tickets",
+    "toursSubheading": "Book skip-the-line entrance to the museum, Arnolfo tower climb, and Secret Passages guided tours.",
+    "practicalHoursHeading": "Opening Hours",
+    "practicalHours": [
+      {
+        "range": "Friday – Wednesday",
+        "time": "9:00 AM – 7:00 PM"
+      },
+      {
+        "range": "Thursday",
+        "time": "9:00 AM – 2:00 PM"
+      }
+    ],
+    "practicalHoursNote": "Tower entry is suspended during rain or adverse weather conditions.",
+    "practicalAddressHeading": "How to Reach?",
+    "practicalAddress": "Piazza della Signoria, 50122 Firenze FI, Italy.",
+    "practicalGettingThere": "Situated on Piazza della Signoria, midway between the Duomo and the Arno River.",
+    "practicalBestTimeHeading": "Tickets & Advice",
+    "practicalBestTimeBody": "<p>Museum only tickets start at €12.50; combined Museum + Tower tickets start around €17.50.</p>",
+    "priceEyebrow": "Pricing",
+    "priceHeading": "Palazzo Vecchio Ticket Options",
+    "priceSubheading": "Compare museum entry, tower passes, and secret passage tours.",
+    "priceNote": "Free cancellation available.",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Frequently Asked Questions",
+    "ctaHeading": "Ready to explore Palazzo Vecchio?",
+    "ctaSubtext": "Book your tickets online and ascend the historic Arnolfo Tower.",
+    "ctaButtonText": "Book Palazzo Vecchio Tickets",
+    "nearbyHeadingOverride": "Nearby Attractions in Florence",
+    "metaTitle": "Palazzo Vecchio Tickets & Arnolfo Tower | Discover Florence",
+    "metaDescription": "Book Palazzo Vecchio museum tickets and Arnolfo Tower climb in Florence. See the Salone dei Cinquecento and secret Medici passages.",
+    "focusKeyword": "Discover Florence | Duomo Florence",
+    "canonicalUrl": "https://www.discover-florence.com/palazzo-vecchio-florence",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "Palazzo Vecchio Tickets & Arnolfo Tower Climb",
+    "ogDescription": "Explore Palazzo Vecchio in Florence: medieval town hall, Salone dei Cinquecento, and panoramic tower views.",
+    "ogImage": "https://images.unsplash.com/photo-1543429776-0683050964eb?q=80&w=1600&auto=format&fit=crop",
+    "createdAt": "2026-09-01T00:00:00.000Z",
+    "updatedAt": "2026-09-01T00:00:00.000Z"
+  },
+  {
+    "id": "boboli-gardens",
+    "slug": "boboli-gardens-florence",
+    "name": "Boboli Gardens",
+    "city": "Florence",
+    "country": "Italy",
+    "currencySymbol": "€",
+    "lat": 43.763,
+    "lng": 11.248,
+    "sortOrder": 5,
+    "featured": false,
+    "rating": 4.6,
+    "reviewsCount": "11.1k",
+    "cardImage": "https://images.unsplash.com/photo-1583207884956-f6d0f1a9b1c5?q=80&w=1200&auto=format&fit=crop",
+    "cardImageAlt": "Boboli Gardens fountains and statues in Florence",
+    "cardTagline": "Grand Renaissance open-air museum, monumental grottos, fountains, and lush pathways.",
+    "heroBadge": "FLORENCE · TICKETS & TOURS",
+    "heroHeading": "Boboli Gardens & Pitti Palace Tickets",
+    "heroSubheading": "<p>Immerse yourself in 45,000 square meters of Renaissance landscape architecture. Created for the Medici dynasty, Boboli Gardens is an outdoor museum adorned with Roman antiquities, grand amphitheaters, and mystical grottos.</p>",
+    "heroImage": "https://images.unsplash.com/photo-1583207884956-f6d0f1a9b1c5?q=80&w=1600&auto=format&fit=crop",
+    "heroImageAlt": "Boboli Gardens Florence green landscape and statues",
+    "highlightsEyebrow": "Highlights",
+    "highlightsHeading": "Top Sights in the Boboli Gardens",
+    "highlightsSubheading": "Wander through centuries of Italian garden design behind the grand Pitti Palace.",
+    "highlights": [
+      {
+        "icon": "⛲",
+        "title": "Neptune Fountain & Ocean Basin",
+        "body": "Monumental sculptural fountain complex set in the upper reflecting pool."
+      },
+      {
+        "icon": "🗿",
+        "title": "Buontalenti Grotto",
+        "body": "An extravagant Mannerist cave filled with stalactites, frescoed ceilings, and Giambologna's Bathing Venus."
+      },
+      {
+        "icon": "🌿",
+        "title": "Viottolone Cypress Avenue",
+        "body": "A towering cypress avenue lined with classical Roman statues leading down to the Isolotto island."
+      },
+      {
+        "icon": "☕",
+        "title": "Kaffeehaus & Porcelain Museum",
+        "body": "An 18th-century Rococo pavilion offering panoramic views of the Tuscan hills surrounding Florence."
+      }
+    ],
+    "aboutHeading": "Inside Boboli Gardens",
+    "aboutBody": "<p>Directly behind Palazzo Pitti, the Boboli Gardens set the prototype for European royal gardens, directly inspiring Versailles. Walk up to the Knight's Garden for sweeping views over the Tuscan countryside, marvel at the ancient Egyptian obelisk in the central amphitheater, and pair your stroll with a visit to the Palatine Gallery inside Pitti Palace.</p>",
+    "toursEyebrow": "Explore & Book",
+    "toursHeading": "Boboli Gardens, Pitti Palace & Bardini Combo Tickets",
+    "toursSubheading": "Book fast-track timed tickets or comprehensive Medici palace garden tours.",
+    "practicalHoursHeading": "Opening Hours",
+    "practicalHours": [
+      {
+        "range": "Daily Opening",
+        "time": "8:15 AM (Closing varies by season: 4:30 PM winter, 6:30 PM spring/fall, 7:15 PM summer)"
+      },
+      {
+        "range": "First & Last Monday of Month",
+        "time": "Closed"
+      }
+    ],
+    "practicalHoursNote": "Last entry is always 1 hour before closing time.",
+    "practicalAddressHeading": "How to Reach?",
+    "practicalAddress": "Piazza de' Pitti 1, 50125 Firenze FI, Italy.",
+    "practicalGettingThere": "Located on the south bank of the Arno River in the Oltrarno district, a 7-minute walk across Ponte Vecchio.",
+    "practicalBestTimeHeading": "Tickets & Practical Tips",
+    "practicalBestTimeBody": "<p>Standard tickets start from €10 in low season and €15 in high season. Comfortable walking shoes are essential as the gardens feature steep terraced slopes.</p>",
+    "priceEyebrow": "Pricing",
+    "priceHeading": "Boboli Gardens Ticket Options",
+    "priceSubheading": "Compare standalone garden tickets and full Pitti Palace combo passes.",
+    "priceNote": "Free cancellation available.",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Frequently Asked Questions",
+    "ctaHeading": "Ready to stroll through the Boboli Gardens?",
+    "ctaSubtext": "Book your tickets today and enjoy Florence's most beautiful Renaissance park.",
+    "ctaButtonText": "Book Boboli Gardens Tickets",
+    "nearbyHeadingOverride": "Nearby Attractions in Florence",
+    "metaTitle": "Boboli Gardens Tickets & Pitti Palace | Discover Florence",
+    "metaDescription": "Book Boboli Gardens tickets in Florence. Explore Renaissance fountains, the Buontalenti Grotto, and Pitti Palace gardens.",
+    "focusKeyword": "Discover Florence | Duomo Florence",
+    "canonicalUrl": "https://www.discover-florence.com/boboli-gardens-florence",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "Boboli Gardens Tickets & Pitti Palace Guide",
+    "ogDescription": "Explore Boboli Gardens in Florence: Renaissance statues, grottos, and panoramic Tuscan hill views.",
+    "ogImage": "https://images.unsplash.com/photo-1583207884956-f6d0f1a9b1c5?q=80&w=1600&auto=format&fit=crop",
+    "createdAt": "2026-09-01T00:00:00.000Z",
+    "updatedAt": "2026-09-01T00:00:00.000Z"
+  }
+]

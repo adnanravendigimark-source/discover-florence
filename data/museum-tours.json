@@ -1,0 +1,264 @@
+[
+  {
+    "id": "duomo-brunelleschi-pass",
+    "museumId": "duomo-florence",
+    "badge": "all-access",
+    "ribbon": "Bestseller",
+    "title": "Duomo Florence Brunelleschi Pass & Dome Climb",
+    "description": "Full access to all 5 monuments: Brunelleschi's Dome climb (463 steps), Giotto's Bell Tower, Baptistery, Opera del Duomo Museum, and Santa Reparata Crypt.",
+    "includes": [
+      "Guaranteed timed entry to climb Brunelleschi's Dome",
+      "Full access to Giotto's Campanile (Bell Tower)",
+      "Access to the Baptistery of San Giovanni",
+      "Access to Opera del Duomo Museum",
+      "Access to ancient Santa Reparata Crypt ruins",
+      "Valid for 72 consecutive hours from first use"
+    ],
+    "highlights": [
+      "Climb 463 steps to the top of the iconic terracotta dome",
+      "Close-up views of Vasari's 'The Last Judgment' fresco",
+      "Unrivaled 360-degree panoramic views over Florence"
+    ],
+    "excludes": [
+      "Guided tour / live guide (audio guide available separately)",
+      "Hotel pickup and drop-off"
+    ],
+    "duration": "72 Hours Validity",
+    "rating": 4.9,
+    "reviews": 12840,
+    "price": 38.00,
+    "originalPrice": 45.00,
+    "image": "https://images.unsplash.com/photo-1541370976299-4d20eb3460f6?q=80&w=1200&auto=format&fit=crop",
+    "imageAlt": "Duomo Florence Dome Climb View",
+    "hrefPath": "https://www.getyourguide.com/florence-l32/brunelleschi-dome-pass-tc1/",
+    "hrefExtra": "",
+    "featured": true,
+    "bestFor": "Best overall value & complete monument access",
+    "priceTableColumn1": "Brunelleschi Pass",
+    "priceTableFeature": "Dome climb + Bell Tower + Baptistery + Museum + Crypt",
+    "category": "Passes"
+  },
+  {
+    "id": "duomo-guided-dome-tour",
+    "museumId": "duomo-florence",
+    "badge": "guided-tour",
+    "ribbon": "Top Rated",
+    "title": "Duomo Florence & Dome Climb Guided Tour",
+    "description": "Skip the line and ascend Brunelleschi's Dome with an expert licensed art historian. Learn the genius architectural feats and hidden secrets of Florence.",
+    "includes": [
+      "Skip-the-line priority entrance to the Dome",
+      "Professional licensed English-speaking guide",
+      "Personal audio headsets to hear the guide clearly",
+      "Full 72-hour pass to Bell Tower, Baptistery, Museum, and Crypt"
+    ],
+    "highlights": [
+      "Skip general admission lines with priority escort",
+      "In-depth commentary on Brunelleschi's engineering breakthroughs",
+      "Exclusive access to terraces and fresco galleries"
+    ],
+    "excludes": [
+      "Food and drinks",
+      "Transportation"
+    ],
+    "duration": "2.5 Hours",
+    "rating": 4.9,
+    "reviews": 5620,
+    "price": 54.00,
+    "originalPrice": 65.00,
+    "image": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?q=80&w=1200&auto=format&fit=crop",
+    "imageAlt": "Florence Cathedral Interior and Dome Tour",
+    "hrefPath": "https://www.getyourguide.com/florence-l32/duomo-guided-tour-tc2/",
+    "hrefExtra": "",
+    "featured": true,
+    "bestFor": "First-time visitors wanting deep historical insights",
+    "priceTableColumn1": "Guided Dome Tour",
+    "priceTableFeature": "Expert art guide + skip-the-line + 72-hr complex pass",
+    "category": "Guided Tours"
+  },
+  {
+    "id": "duomo-giotto-pass",
+    "museumId": "duomo-florence",
+    "badge": "self-guided",
+    "ribbon": null,
+    "title": "Duomo Florence Giotto Pass (Bell Tower & Complex)",
+    "description": "Climb Giotto's 85m high Bell Tower and visit the Baptistery of St. John, Opera del Duomo Museum, and Santa Reparata Crypt.",
+    "includes": [
+      "Access to Giotto's Campanile (414 steps)",
+      "Access to the Baptistery of San Giovanni",
+      "Access to Opera del Duomo Museum",
+      "Access to ancient Santa Reparata Crypt",
+      "72-hour pass validity"
+    ],
+    "highlights": [
+      "Spectacular view of the Duomo Dome from across the piazza",
+      "See Michelangelo's Bandini Pietà in the Opera Museum",
+      "Ghiberti's Gates of Paradise at the Baptistery"
+    ],
+    "excludes": [
+      "Brunelleschi Dome climb (requires Brunelleschi Pass)",
+      "Guided tour"
+    ],
+    "duration": "72 Hours Validity",
+    "rating": 4.8,
+    "reviews": 3140,
+    "price": 25.00,
+    "originalPrice": null,
+    "image": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop",
+    "imageAlt": "Giotto's Bell Tower in Florence",
+    "hrefPath": "https://www.getyourguide.com/florence-l32/giotto-pass-tc3/",
+    "hrefExtra": "",
+    "featured": false,
+    "bestFor": "Climbers who prefer the bell tower view of the dome",
+    "priceTableColumn1": "Giotto Pass",
+    "priceTableFeature": "Bell tower + Baptistery + Museum + Crypt",
+    "category": "Passes"
+  },
+  {
+    "id": "uffizi-priority-entry",
+    "museumId": "uffizi-gallery",
+    "badge": "skip-the-line",
+    "ribbon": "Bestseller",
+    "title": "Uffizi Gallery Priority Timed-Entry Ticket",
+    "description": "Skip the 2+ hour ticket office queues with reserved timed entry. Immerse yourself in the world's greatest Renaissance collection at your own pace.",
+    "includes": [
+      "Priority skip-the-ticket-line reserved entry",
+      "Full access to all permanent collections on 1st & 2nd floors",
+      "Access to current temporary exhibitions",
+      "Stay inside as long as you wish until closing"
+    ],
+    "highlights": [
+      "Sandro Botticelli's Birth of Venus and Primavera",
+      "Leonardo da Vinci's Annunciation",
+      "Michelangelo's Doni Tondo and Raphael's Madonnas"
+    ],
+    "excludes": [
+      "Audio guide (available for rental on site)",
+      "Live tour guide"
+    ],
+    "duration": "Flexible (avg. 2.5 hrs)",
+    "rating": 4.8,
+    "reviews": 14200,
+    "price": 28.00,
+    "originalPrice": 35.00,
+    "image": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?q=80&w=1200&auto=format&fit=crop",
+    "imageAlt": "Uffizi Gallery Masterpieces Room",
+    "hrefPath": "https://www.getyourguide.com/florence-l32/uffizi-priority-ticket-tc4/",
+    "hrefExtra": "",
+    "featured": true,
+    "bestFor": "Independent travelers wanting flexible pacing",
+    "priceTableColumn1": "Priority Entry",
+    "priceTableFeature": "Skip the ticket line + full gallery access",
+    "category": "Skip The Line"
+  },
+  {
+    "id": "uffizi-guided-masterpieces-tour",
+    "museumId": "uffizi-gallery",
+    "badge": "guided-tour",
+    "ribbon": "Top Rated",
+    "title": "Uffizi Gallery Small-Group Guided Highlights Tour",
+    "description": "Join an engaging art historian for a curated 2-hour journey through the masterpieces of the Italian Renaissance with priority fast-track admission.",
+    "includes": [
+      "Fast-track skip-the-line entry to the Uffizi Gallery",
+      "Expert licensed English-speaking art historian guide",
+      "Small intimate group (max 12–15 people)",
+      "Headsets to hear the guide clearly throughout"
+    ],
+    "highlights": [
+      "Uncover hidden symbolism in Botticelli's paintings",
+      "Learn the fascinating history of the Medici art dynasty",
+      "Rooftop terrace views over Piazza della Signoria"
+    ],
+    "excludes": [
+      "Food and drinks",
+      "Hotel transfer"
+    ],
+    "duration": "2 Hours",
+    "rating": 4.9,
+    "reviews": 6850,
+    "price": 49.00,
+    "originalPrice": 60.00,
+    "image": "https://images.unsplash.com/photo-1543429776-0683050964eb?q=80&w=1200&auto=format&fit=crop",
+    "imageAlt": "Guided tour inside Uffizi Gallery",
+    "hrefPath": "https://www.getyourguide.com/florence-l32/uffizi-guided-tour-tc5/",
+    "hrefExtra": "",
+    "featured": true,
+    "bestFor": "Art enthusiasts who want expert storytelling",
+    "priceTableColumn1": "Guided Tour",
+    "priceTableFeature": "Art historian guide + small group + fast-track entry",
+    "category": "Guided Tours"
+  },
+  {
+    "id": "accademia-david-skip-the-line",
+    "museumId": "accademia-gallery",
+    "badge": "skip-the-line",
+    "ribbon": "Must See",
+    "title": "Accademia Gallery Timed Entry (Michelangelo's David)",
+    "description": "Bypass the massive entrance queues with a reserved timed ticket to see Michelangelo's original David statue and the Hall of the Prisoners.",
+    "includes": [
+      "Reserved timed skip-the-line entry",
+      "Full access to Galleria dell'Accademia permanent collection",
+      "Access to the Museum of Musical Instruments",
+      "Stay as long as you like inside the gallery"
+    ],
+    "highlights": [
+      "Michelangelo's 17-foot marble masterpiece David",
+      "Hall of the Prisoners showing unfinished 'Slaves'",
+      "Rare Stradivari violin and Medici musical instruments"
+    ],
+    "excludes": [
+      "Live tour guide",
+      "Audio guide"
+    ],
+    "duration": "Flexible (avg. 1.5 hrs)",
+    "rating": 4.8,
+    "reviews": 11300,
+    "price": 22.00,
+    "originalPrice": 28.00,
+    "image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200&auto=format&fit=crop",
+    "imageAlt": "Michelangelo David sculpture in Accademia",
+    "hrefPath": "https://www.getyourguide.com/florence-l32/accademia-priority-ticket-tc6/",
+    "hrefExtra": "",
+    "featured": true,
+    "bestFor": "Seeing David up close without waiting in line",
+    "priceTableColumn1": "Timed Entry",
+    "priceTableFeature": "Skip the line + full museum & instruments access",
+    "category": "Skip The Line"
+  },
+  {
+    "id": "florence-combo-pass",
+    "museumId": "duomo-florence",
+    "badge": "combo-pass",
+    "ribbon": "Super Saver",
+    "title": "Florence Ultimate Pass: Duomo + Uffizi + Accademia",
+    "description": "The ultimate Florence package: see Brunelleschi's Dome, Botticelli's Birth of Venus, and Michelangelo's David with all priority skip-the-line entries.",
+    "includes": [
+      "Duomo Florence Brunelleschi Pass (Dome climb & 5 monuments)",
+      "Uffizi Gallery priority timed entrance ticket",
+      "Accademia Gallery priority timed entrance ticket",
+      "Digital Florence audio guide app with 70+ city points of interest"
+    ],
+    "highlights": [
+      "Covers the top 3 bucket-list sights in Florence",
+      "Save 15% compared to purchasing individual tickets",
+      "Flexible timed scheduling across multiple days"
+    ],
+    "excludes": [
+      "Live guided tour (app audio guide included)",
+      "Transport"
+    ],
+    "duration": "3 Days Pass",
+    "rating": 4.9,
+    "reviews": 8420,
+    "price": 88.00,
+    "originalPrice": 105.00,
+    "image": "https://images.unsplash.com/photo-1541370976299-4d20eb3460f6?q=80&w=1200&auto=format&fit=crop",
+    "imageAlt": "Florence Top 3 Attractions Combo Pass",
+    "hrefPath": "https://www.getyourguide.com/florence-l32/florence-combo-pass-tc7/",
+    "hrefExtra": "",
+    "featured": true,
+    "bestFor": "Visitors looking to see all of Florence's top highlights",
+    "priceTableColumn1": "Ultimate Combo Pass",
+    "priceTableFeature": "Duomo Dome + Uffizi + Accademia + City Audio Guide",
+    "category": "Passes"
+  }
+]

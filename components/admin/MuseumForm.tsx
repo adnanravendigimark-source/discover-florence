@@ -4,14 +4,13 @@ import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import ImageUploadField from "./ImageUploadField";
-import NearbyPlacesPanel from "./NearbyPlacesPanel";
 import RichTextEditor from "./RichTextEditor";
 import RepeatableList from "./RepeatableList";
 import SeoPreview from "./SeoPreview";
 import CharCounter from "./CharCounter";
 import SaveBar from "./SaveBar";
 import { useToast } from "./Toast";
-import type { Museum, HighlightCard, HoursRow, TourRecord } from "@/lib/museums";
+import type { Museum, HighlightCard, HoursRow, TourRecord, OtherAttraction } from "@/lib/museums";
 
 const inputClass =
   "w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-canal-blue focus:outline-none focus:ring-1 focus:ring-canal-blue";
@@ -20,7 +19,7 @@ const hintClass = "mt-1 text-xs text-stone-500";
 
 // One entry per section card, in the same order those sections actually
 // appear on the live museum page (hero → tickets → highlights → practical
-// info → price table → nearby attractions → FAQ → CTA), with the
+// info → price table → other attractions → FAQ → CTA), with the
 // non-visual identity/SEO/social sections bookending the flow. Powers both
 // the "Jump to section" quick nav and each card's default open/closed state.
 const SECTIONS = [
@@ -31,7 +30,7 @@ const SECTIONS = [
   { id: "sec-highlights", label: "Highlights & About" },
   { id: "sec-practical", label: "Practical Info" },
   { id: "sec-price", label: "Price Comparison Table" },
-  { id: "sec-nearby", label: "Nearby Attractions" },
+  { id: "sec-other-attractions", label: "Other Attractions" },
   { id: "sec-faq", label: "FAQ Section" },
   { id: "sec-cta", label: "Bottom CTA Banner" },
   { id: "sec-seo", label: "SEO" },
@@ -138,28 +137,6 @@ export default function MuseumForm({
     setDirty(true);
   }
 
-  // "Re-check now" (NearbyPlacesPanel) already persists straight to the
-  // database itself — it isn't a form field the Save button needs to write.
-  // Updating local state without marking the form dirty keeps the displayed
-  // list in sync with what was just resolved, without implying there's now
-  // an unsaved change, or risking it being reverted by "Discard changes".
-  function handleNearbyPlacesRecheck(places: Museum["nearbyPlaces"], resolvedAt: string) {
-    setMuseum((m) => ({ ...m, nearbyPlaces: places, nearbyPlacesResolvedAt: resolvedAt }));
-  }
-
-  // Editing a single place's photo IS a normal form field edit, unlike the
-  // recheck above — it only takes effect once the admin clicks Save, same
-  // as every other field, and is written to nearby_places_json then (see
-  // updateMuseum). Only the matching place's imageUrl changes; its name,
-  // category, mode, and every other place are left exactly as they were.
-  function handleNearbyPlaceImageChange(placeId: string, url: string) {
-    setMuseum((m) => ({
-      ...m,
-      nearbyPlaces: m.nearbyPlaces.map((p) => (p.id === placeId ? { ...p, imageUrl: url || undefined } : p)),
-    }));
-    setDirty(true);
-  }
-
   function handleNameChange(name: string) {
     setMuseum((m) => {
       const next = { ...m, name };
@@ -197,11 +174,6 @@ export default function MuseumForm({
     if (!museum.id.trim() || !museum.slug.trim() || !museum.name.trim()) {
       setSaving(false);
       setError("Name is required (ID and slug are generated from it).");
-      return;
-    }
-    if (!Number.isFinite(museum.lat) || !Number.isFinite(museum.lng) || (museum.lat === 0 && museum.lng === 0)) {
-      setSaving(false);
-      setError("A real latitude/longitude is required for the Nearby Attractions feature to work — see the Practical Info section.");
       return;
     }
 
@@ -280,7 +252,7 @@ export default function MuseumForm({
       >
         <div className="grid gap-5 sm:grid-cols-2">
           <Field label="Museum / attraction name">
-            <input required value={museum.name} onChange={(e) => handleNameChange(e.target.value)} className={inputClass} placeholder="e.g. Louvre Museum" />
+            <input required value={museum.name} onChange={(e) => handleNameChange(e.target.value)} className={inputClass} placeholder="e.g. Duomo Florence" />
           </Field>
           <Field label="Currency symbol" hint='e.g. "€", "CHF ", "$"'>
             <input value={museum.currencySymbol} onChange={(e) => update("currencySymbol", e.target.value)} className={inputClass} />
@@ -305,7 +277,7 @@ export default function MuseumForm({
             />
           </Field>
           <Field label="URL slug" hint={`Public URL: /${museum.slug || "your-slug"}`}>
-            <input required value={museum.slug} onChange={(e) => update("slug", slugify(e.target.value))} className={inputClass} placeholder="e.g. louvre-museum-tickets-tour" />
+            <input required value={museum.slug} onChange={(e) => update("slug", slugify(e.target.value))} className={inputClass} placeholder="e.g. duomo-florence-tickets" />
           </Field>
         </div>
         <div className="grid gap-5 sm:grid-cols-2">
@@ -456,7 +428,7 @@ export default function MuseumForm({
       <SectionCard
         id="sec-practical"
         title="Practical Info"
-        description="Hours, best time to visit, address, and the coordinates used for the Nearby Attractions feature."
+        description="Hours, best time to visit, address, and coordinates (used only for optional map/SEO data — not required)."
         open={!!openSections["sec-practical"]}
         onToggle={() => toggleSection("sec-practical")}
       >
@@ -504,16 +476,14 @@ export default function MuseumForm({
 
         <div className="border-t border-stone-100 pt-5">
           <p className="mb-2 text-xs text-stone-500">
-            Real lat/lng is required so the Nearby Attractions feature can find genuinely nearby places by walking
-            (≤3km) and driving (≤10km) distance. Get exact coordinates from Google Maps: right-click the pin → click
-            the coordinates to copy them.
+            Optional — only used to add map coordinates (GeoCoordinates) to this page's structured data for search
+            engines. Get exact coordinates from Google Maps: right-click the pin → click the coordinates to copy them.
           </p>
           <div className="grid gap-5 sm:grid-cols-2">
             <Field label="Latitude">
               <input
                 type="number"
                 step="any"
-                required
                 value={museum.lat}
                 onChange={(e) => update("lat", Number(e.target.value))}
                 className={inputClass}
@@ -524,7 +494,6 @@ export default function MuseumForm({
               <input
                 type="number"
                 step="any"
-                required
                 value={museum.lng}
                 onChange={(e) => update("lng", Number(e.target.value))}
                 className={inputClass}
@@ -567,33 +536,67 @@ export default function MuseumForm({
         </Field>
       </SectionCard>
 
-      {/* ---------------- NEARBY ATTRACTIONS ---------------- */}
+      {/* ---------------- OTHER ATTRACTIONS ---------------- */}
       <SectionCard
-        id="sec-nearby"
-        title="Nearby Attractions"
-        description="Resolved from OpenStreetMap using the coordinates above and stored — name, category, and mode are fully automatic and can't be edited by hand, but you can set a custom photo per place below. Recalculated when this museum is created, when its coordinates change, or with 'Re-check now' — never on every page view — and a custom photo survives all of those as long as the place is still found."
-        open={!!openSections["sec-nearby"]}
-        onToggle={() => toggleSection("sec-nearby")}
+        id="sec-other-attractions"
+        title="Other Attractions"
+        description="A hand-picked list of other things to do near this museum — name, category label, photo, and where each card links, all typed in here. Nothing is looked up automatically; save this the same way as every other field below."
+        open={!!openSections["sec-other-attractions"]}
+        onToggle={() => toggleSection("sec-other-attractions")}
       >
-        {isNew ? (
-          <p className="rounded-lg bg-stone-50 px-3 py-2 text-xs text-stone-500">
-            Save this museum first — its Nearby Attractions list resolves automatically once it has real coordinates
-            on file.
-          </p>
-        ) : (
-          <div>
-            <label className={labelClass}>Nearby Attractions</label>
-            <div className="mt-1">
-              <NearbyPlacesPanel
-                museumId={museum.id}
-                places={museum.nearbyPlaces || []}
-                resolvedAt={museum.nearbyPlacesResolvedAt || ""}
-                onImageChange={handleNearbyPlaceImageChange}
-                onRecheckComplete={handleNearbyPlacesRecheck}
-              />
-            </div>
-          </div>
-        )}
+        <Field label="Section heading" hint={`Shown above the cards. Leave blank to use the default, "Other Top Attractions in Florence".`}>
+          <input
+            value={museum.otherAttractionsHeading}
+            onChange={(e) => update("otherAttractionsHeading", e.target.value)}
+            className={inputClass}
+            placeholder="Other Top Attractions in Florence"
+          />
+        </Field>
+        <Field label="Attractions">
+          <RepeatableList<OtherAttraction>
+            items={museum.otherAttractions}
+            onChange={(otherAttractions) => update("otherAttractions", otherAttractions)}
+            newItem={() => ({ name: "", category: "", image: "", imageAlt: "", href: "" })}
+            addLabel="+ Add attraction"
+            emptyLabel="Nothing added yet — this section stays hidden on the public page until at least one attraction is added."
+            renderItem={(attraction, upd) => (
+              <div className="space-y-2.5">
+                <div className="grid gap-2 sm:grid-cols-2">
+                  <input
+                    value={attraction.name}
+                    onChange={(e) => upd({ ...attraction, name: e.target.value })}
+                    placeholder="Name (e.g. Uffizi Gallery)"
+                    className={inputClass}
+                  />
+                  <input
+                    value={attraction.category}
+                    onChange={(e) => upd({ ...attraction, category: e.target.value })}
+                    placeholder="Category badge (e.g. Museum, Landmark)"
+                    className={inputClass}
+                  />
+                </div>
+                <ImageUploadField
+                  label="Photo"
+                  value={attraction.image}
+                  onChange={(url) => upd({ ...attraction, image: url })}
+                  aspectRatio={16 / 10}
+                />
+                <input
+                  value={attraction.imageAlt}
+                  onChange={(e) => upd({ ...attraction, imageAlt: e.target.value })}
+                  placeholder="Photo alt text"
+                  className={inputClass}
+                />
+                <input
+                  value={attraction.href}
+                  onChange={(e) => upd({ ...attraction, href: e.target.value })}
+                  placeholder="Where the card links (e.g. a GetYourGuide/booking URL)"
+                  className={inputClass}
+                />
+              </div>
+            )}
+          />
+        </Field>
       </SectionCard>
 
       {/* ---------------- FAQ SECTION ---------------- */}
@@ -668,7 +671,7 @@ export default function MuseumForm({
 
         <div className="border-t border-stone-100 pt-5">
           <Field label="Focus keyword">
-            <input value={museum.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Louvre Museum tickets" />
+            <input value={museum.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Discover Florence | Duomo Florence" />
           </Field>
         </div>
         {focusChecklist && (

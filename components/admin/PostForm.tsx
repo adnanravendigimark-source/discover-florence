@@ -245,7 +245,7 @@ export default function PostForm({
                   value={post.title}
                   onChange={(e) => updateTitle(e.target.value)}
                   className={inputClass}
-                  placeholder="e.g. How to Skip the Line at the Louvre"
+                  placeholder="e.g. How to Climb Brunelleschi's Dome in Florence"
                 />
               </Field>
 
@@ -283,7 +283,7 @@ export default function PostForm({
               </div>
 
               <div className="grid gap-5 sm:grid-cols-3">
-                <Field label="Author" hint="e.g. Visit Museums Editorial Team">
+                <Field label="Author" hint="e.g. Discover Florence Editorial Team">
                   <input
                     value={post.author || ""}
                     onChange={(e) => update("author", e.target.value)}
@@ -456,7 +456,7 @@ export default function PostForm({
                   value={post.focusKeyword}
                   onChange={(e) => update("focusKeyword", e.target.value)}
                   className={inputClass}
-                  placeholder="e.g. Visit Museums"
+                  placeholder="e.g. Discover Florence | Duomo Florence"
                 />
               </Field>
               {focusChecklist && (

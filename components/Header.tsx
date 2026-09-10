@@ -23,7 +23,7 @@ export default async function Header() {
         <div className="shrink-0">
           <Logo
             logoImage={header.logoImage}
-            logoAlt={header.logoAlt || "Visit Museums"}
+            logoAlt={header.logoAlt || "Discover Florence"}
           />
         </div>
 

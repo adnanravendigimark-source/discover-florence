@@ -20,9 +20,9 @@ export default async function AdminDashboardLayout({ children }: { children: Rea
       pages={pages}
       sessionEmail={session?.email}
       sessionRole={session?.role}
-      brandName="Visit Museums"
-      brandColorClass="text-canal-orange"
-      avatarColorClass="bg-canal-ink"
+      brandName="Discover Florence"
+      brandColorClass="text-[#184E3A]"
+      avatarColorClass="bg-[#184E3A]"
     >
       {children}
     </AdminShell>

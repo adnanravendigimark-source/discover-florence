@@ -11,7 +11,6 @@ import MuseumTourGrid from "@/components/MuseumTourGrid";
 import MuseumHighlights from "@/components/MuseumHighlights";
 import MuseumPracticalInfo from "@/components/MuseumPracticalInfo";
 import MuseumPriceComparison from "@/components/MuseumPriceComparison";
-import NearbyAttractions from "@/components/NearbyAttractions";
 import MuseumFaqSection from "@/components/MuseumFaqSection";
 import OtherAttractionsSection from "@/components/OtherAttractionsSection";
 import CtaBanner from "@/components/CtaBanner";
@@ -22,6 +21,7 @@ import { getPost, getPosts } from "@/lib/posts";
 import { extractTableOfContents } from "@/lib/tableOfContents";
 import { getRedirectTarget } from "@/lib/redirects";
 import { getHomepageContent } from "@/lib/homepage";
+import { getBlogSeoSettings } from "@/lib/settings";
 import {
   resolveRobots,
   resolveCanonical,
@@ -93,7 +93,7 @@ function formatPostDate(iso: string) {
 
 function getAuthorParts(author: string) {
   const [namePart, rolePart] = (author || "").split("/").map((s) => s.trim());
-  const name = namePart || "Visit Museums";
+  const name = namePart || "Discover Florence";
   const role = rolePart || "";
   const initials =
     name
@@ -103,7 +103,7 @@ function getAuthorParts(author: string) {
       .map((w) => w[0])
       .join("")
       .slice(0, 2)
-      .toUpperCase() || "VM";
+      .toUpperCase() || "DF";
   return { name, role, initials };
 }
 
@@ -191,8 +191,7 @@ export default async function SlugPage({ params }: { params: { slug: string } })
           <MuseumHighlights museum={museum} />
           <MuseumPracticalInfo museum={museum} />
           <MuseumPriceComparison museum={museum} />
-          <NearbyAttractions museum={museum} />
-          <OtherAttractionsSection currentMuseumId={museum.id} headingOverride={museum.nearbyHeadingOverride} />
+          <OtherAttractionsSection attractions={museum.otherAttractions} heading={museum.otherAttractionsHeading} />
           <MuseumFaqSection museum={museum} />
           <CtaBanner
             heading={museum.ctaHeading}
@@ -214,7 +213,7 @@ export default async function SlugPage({ params }: { params: { slug: string } })
   // 2. Check if slug is a Blog Post
   const post = await getPost(params.slug);
   if (post) {
-    const allPosts = await getPosts();
+    const [allPosts, blogSettings] = await Promise.all([getPosts(), getBlogSeoSettings()]);
     const recentPosts = allPosts.filter((p) => p.slug !== post.slug).slice(0, 6);
     // Headings in the article body get an id injected so the sidebar's
     // Table of Contents can jump-link to them.
@@ -230,14 +229,14 @@ export default async function SlugPage({ params }: { params: { slug: string } })
       dateModified: post.updatedAt || post.date,
       author: {
         "@type": "Organization",
-        name: post.author || "Visit Museums",
+        name: post.author || "Discover Florence",
       },
       publisher: {
         "@type": "Organization",
-        name: "Visit Museums",
+        name: "Discover Florence",
         logo: {
           "@type": "ImageObject",
-          url: `${SITE_URL}/images/visit-museums-logo.png`,
+          url: `${SITE_URL}/icon.png`,
         },
       },
       mainEntityOfPage: {
@@ -357,6 +356,17 @@ export default async function SlugPage({ params }: { params: { slug: string } })
                   slug={post.slug}
                   popularPosts={recentPosts}
                   toc={toc}
+                  // Was previously always the component's hardcoded default
+                  // props ("Compare Museum Tickets & Tours" / "Find the best
+                  // ticket options..." / "Compare Tickets & Tours →" / href
+                  // "/") on every single blog post page — no admin field
+                  // backed any of it. Reuses the same Blog Page admin
+                  // settings ("Sidebar promo heading/body/button") that
+                  // already drive the equivalent promo card on /blog itself.
+                  promoHeading={blogSettings.ctaHeading}
+                  promoBody={blogSettings.ctaBody}
+                  compareLinkText={blogSettings.ctaButtonText}
+                  compareLinkHref={blogSettings.ctaButtonHref}
                 />
               </div>
             </div>

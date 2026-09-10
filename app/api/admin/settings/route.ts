@@ -34,6 +34,8 @@ export async function PUT(req: Request) {
     heroHeading: body?.heroHeading || "",
     heroSubheading: body?.heroSubheading || "",
     emptyStateText: body?.emptyStateText || "",
+    ctaHeading: body?.ctaHeading || "",
+    ctaBody: body?.ctaBody || "",
     ctaButtonText: body?.ctaButtonText || "",
     ctaButtonHref: body?.ctaButtonHref || "",
   };

@@ -132,7 +132,7 @@ export default function MuseumTourForm({
           value={tour.id}
           onChange={(e) => update("id", e.target.value)}
           className={`${inputClass} ${!isNew ? "bg-stone-100 text-stone-500" : ""}`}
-          placeholder="e.g. louvre-skip-the-line-guided-tour"
+          placeholder="e.g. duomo-brunelleschi-pass"
         />
       </Field>
 
@@ -192,7 +192,7 @@ export default function MuseumTourForm({
             value={tour.hrefPath || ""}
             onChange={(e) => update("hrefPath", e.target.value)}
             className={inputClass}
-            placeholder="paris-l16/louvre-tour-t12345 — or paste a full https:// URL"
+            placeholder="florence-l32/brunelleschi-dome-pass — or paste a full https:// URL"
           />
         </Field>
         <Field label="Link extra params (optional)">

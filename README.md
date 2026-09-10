@@ -2,7 +2,7 @@
 
 Independent museum & attraction ticket comparison portal — skip-the-line
 tickets, guided tours, and combo passes for museums and cultural landmarks
-worldwide, plus a real lat/lng-based "Nearby Attractions" feature on every
+worldwide, plus an admin-curated "Other Attractions" section on every
 museum page.
 
 Built on the same architecture, CMS, and database patterns as this
@@ -43,34 +43,20 @@ admin.
 See `.env.example` for every environment variable the app uses and what
 each one enables or disables when left unset.
 
-## Nearby Attractions
+## Other Attractions
 
-Each museum page shows "Nearby Attractions" — real points of interest
-pulled from OpenStreetMap around that museum's stored latitude/longitude,
-not hardcoded relationships and not this site's own museum list:
+Each museum page can show an "Other Attractions" section — a hand-picked
+list of nearby things to do, entirely authored by an admin on that
+museum's own edit page (`/admin/museums/[id]` → "Other Attractions"): a
+name, a category badge, a photo, and the URL each card links to.
 
-1. Candidates come from the Overpass API (OpenStreetMap), tried against a
-   fixed list of free public mirrors in a fixed order — never raced against
-   each other, so the result doesn't depend on which mirror happens to
-   answer first.
-2. Real routing distances come from OSRM (`lib/routing.ts`) — driving via
-   the free public OSRM demo server by default, or your own `OSRM_BASE_URL`
-   for both walking and driving. Attractions within **3km real walking
-   distance** are labeled "walk"; within **10km real driving distance**,
-   "drive"; anything farther is excluded.
-3. Each place gets a genuine photo when one's available (`lib/nearbyPlaces.ts`'s
-   `getPlaceImage`, checked in order: the OSM `image` tag, `wikimedia_commons`,
-   Wikipedia, then Wikidata) — never a fake or placeholder image.
-
-**This is resolved once and stored, not recomputed on every page view.**
-`lib/museums.ts`'s `resolveAndPersistNearbyPlaces` runs — and writes the
-result to the `museums.nearby_places_json` column — only when: a museum is
-created, its coordinates change, or an admin clicks "Re-check now" on the
-museum's Nearby Attractions panel. The admin panel and the public page both
-read that same stored value, so they always match. A museum added before
-this existed (or whose coordinates have never changed) won't have a
-resolved list until one of those three things happens to it — use "Re-check
-now" (or "Re-check all", from the museums list) to backfill it.
+This replaces an earlier version of this feature that auto-resolved real
+places from OpenStreetMap by coordinates (Overpass API + OSRM routing).
+That approach was removed — nothing here is looked up or guessed anymore;
+every attraction is typed in by hand, the same way as any other admin-
+editable list on this page (e.g. the Highlights cards). A museum with no
+attractions added yet simply doesn't show the section, rather than
+displaying anything auto-generated.
 
 ## Architecture notes
 

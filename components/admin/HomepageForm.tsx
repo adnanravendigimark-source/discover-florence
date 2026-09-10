@@ -322,7 +322,7 @@ export default function HomepageForm({ initial }: { initial: HomepageContent }) 
                 <>
                   Shown in this order, right after the logo — every entry here appears in the
                   header, no exceptions. Point one at a museum page (e.g.{" "}
-                  <code>/louvre-museum-tickets-tour</code>) same as any other link.
+                  <code>/duomo-florence-tickets</code>) same as any other link.
                 </>
               }
             >
@@ -717,7 +717,7 @@ export default function HomepageForm({ initial }: { initial: HomepageContent }) 
                 )}
               </div>
               <div className="bg-stone-50 p-3">
-                <p className="truncate text-xs uppercase tracking-wide text-stone-400">visit-museums.com</p>
+                <p className="truncate text-xs uppercase tracking-wide text-stone-400">discover-florence.com</p>
                 <p className="mt-0.5 truncate text-sm font-semibold text-stone-900">{content.ogTitle || content.metaTitle || content.heroHeading}</p>
                 <p className="mt-0.5 line-clamp-2 text-xs text-stone-500">{(content.ogDescription || content.metaDescription || content.heroSubheading).replace(/<[^>]+>/g, "")}</p>
               </div>
@@ -750,7 +750,7 @@ export default function HomepageForm({ initial }: { initial: HomepageContent }) 
         <div className="space-y-5">
           <SectionCard title="Focus keyword" description="The main phrase you want the homepage to rank for. Purely a writing aid — nothing here is sent to Google.">
             <Field label="Focus keyword">
-              <input value={content.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. visit museums" />
+              <input value={content.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Discover Florence | Duomo Florence" />
             </Field>
             {focusChecklist && (
               <ul className="space-y-1.5 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm">

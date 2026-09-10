@@ -68,8 +68,9 @@ export default function BlogSeoForm({ initial }: { initial: BlogSeoSettings }) {
       <div className="rounded-2xl border border-stone-200 bg-white p-6">
         <p className="font-semibold text-stone-900">Blog listing page content</p>
         <p className="mt-0.5 text-xs text-stone-500">
-          The hero banner and empty-state/CTA copy shown on /blog. The article grid itself is
-          managed from the Posts admin.
+          The hero banner and empty-state copy shown on /blog. The article grid itself is
+          managed from the Posts admin. The sidebar promo card (heading/body/button below) is
+          shared by both the /blog listing page and every individual guide page.
         </p>
         <div className="mt-4 space-y-4">
           <Field label="Hero eyebrow">
@@ -83,6 +84,12 @@ export default function BlogSeoForm({ initial }: { initial: BlogSeoSettings }) {
           </Field>
           <Field label="Empty state message" hint="Shown when there are no published posts yet.">
             <input value={settings.emptyStateText} onChange={(e) => update("emptyStateText", e.target.value)} className={inputClass} />
+          </Field>
+          <Field label="Sidebar promo heading" hint="Heading on the dark 'Book Your Tickets' card in the article sidebar.">
+            <input value={settings.ctaHeading} onChange={(e) => update("ctaHeading", e.target.value)} className={inputClass} />
+          </Field>
+          <Field label="Sidebar promo body">
+            <textarea rows={2} value={settings.ctaBody} onChange={(e) => update("ctaBody", e.target.value)} className={inputClass} />
           </Field>
           <div className="grid gap-4 sm:grid-cols-2">
             <Field label="Sidebar promo button text">

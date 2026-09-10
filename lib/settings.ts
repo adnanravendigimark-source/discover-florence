@@ -18,27 +18,35 @@ export interface BlogSeoSettings {
   heroHeading: string;
   heroSubheading: string;
   emptyStateText: string;
+  // Sidebar "Book Your Tickets" promo card heading/body — previously
+  // hardcoded directly in app/blog/page.tsx with no admin field backing
+  // them at all, even though BlogIndexContainer/BlogIndexSidebar already
+  // accepted them as props.
+  ctaHeading: string;
+  ctaBody: string;
   ctaButtonText: string;
   ctaButtonHref: string;
 }
 
 const DEFAULT_SETTINGS: BlogSeoSettings = {
-  metaTitle: "Visit Museums Blog | Tickets, Tips & Guides (2026)",
+  metaTitle: "Discover Florence Blog | Duomo, Uffizi & Florence Travel Guides (2026)",
   metaDescription:
-    "Comprehensive travel and visitor guides for museum and attraction tickets worldwide — skip-the-line strategies, combo passes, and practical visiting tips.",
+    "Comprehensive travel and visitor guides for Florence museum tickets, Brunelleschi Dome climbs, Uffizi Gallery, Accademia, and Tuscany itineraries.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,
   ogTitle: "",
   ogDescription: "",
   ogImage: "",
-  heroEyebrow: "MUSEUM TRAVEL GUIDES",
-  heroHeading: "Insider Guides for Museum Visitors",
+  heroEyebrow: "FLORENCE TRAVEL GUIDES",
+  heroHeading: "Insider Guides for Florence Visitors",
   heroSubheading:
-    "Expert tips on booking tickets, avoiding queues, and planning your museum day — written by people who actually visit these places.",
-  emptyStateText: "No guides published yet — check back soon for new museum travel guides!",
-  ctaButtonText: "Browse Museum Tickets →",
-  ctaButtonHref: "/",
+    "Expert tips on booking tickets, avoiding queues, and planning your Florence visit — written by passionate travelers and art historians.",
+  emptyStateText: "No guides published yet — check back soon for new Florence travel guides!",
+  ctaHeading: "Ready to Plan Your Museum Visit?",
+  ctaBody: "Compare skip-the-line tickets and guided tours in one place.",
+  ctaButtonText: "Browse Florence Tickets →",
+  ctaButtonHref: "/#museums",
 };
 
 export async function getBlogSeoSettings(): Promise<BlogSeoSettings> {
@@ -59,6 +67,8 @@ export async function getBlogSeoSettings(): Promise<BlogSeoSettings> {
       heroHeading: row.blog_hero_heading || DEFAULT_SETTINGS.heroHeading,
       heroSubheading: row.blog_hero_subheading || DEFAULT_SETTINGS.heroSubheading,
       emptyStateText: row.blog_empty_state_text || DEFAULT_SETTINGS.emptyStateText,
+      ctaHeading: row.blog_cta_heading || DEFAULT_SETTINGS.ctaHeading,
+      ctaBody: row.blog_cta_body || DEFAULT_SETTINGS.ctaBody,
       ctaButtonText: row.blog_cta_button_text || DEFAULT_SETTINGS.ctaButtonText,
       ctaButtonHref: row.blog_cta_button_href || DEFAULT_SETTINGS.ctaButtonHref,
     };
@@ -86,13 +96,14 @@ export async function saveBlogSeoSettings(data: BlogSeoSettings): Promise<void> 
       id, blog_meta_title, blog_meta_description, blog_canonical_url,
       blog_no_index, blog_no_follow, blog_og_title, blog_og_description, blog_og_image,
       blog_hero_eyebrow, blog_hero_heading, blog_hero_subheading,
-      blog_empty_state_text, blog_cta_button_text, blog_cta_button_href
+      blog_empty_state_text, blog_cta_heading, blog_cta_body, blog_cta_button_text, blog_cta_button_href
     ) VALUES (
       1, ${data.metaTitle}, ${data.metaDescription}, ${data.canonicalUrl || ""},
       ${!!data.noIndex}, ${!!data.noFollow}, ${data.ogTitle || ""},
       ${data.ogDescription || ""}, ${data.ogImage || ""},
       ${data.heroEyebrow || ""}, ${data.heroHeading || ""}, ${data.heroSubheading || ""},
-      ${data.emptyStateText || ""}, ${data.ctaButtonText || ""}, ${data.ctaButtonHref || ""}
+      ${data.emptyStateText || ""}, ${data.ctaHeading || ""}, ${data.ctaBody || ""},
+      ${data.ctaButtonText || ""}, ${data.ctaButtonHref || ""}
     )
     ON CONFLICT (id) DO UPDATE SET
       blog_meta_title = EXCLUDED.blog_meta_title,
@@ -107,6 +118,8 @@ export async function saveBlogSeoSettings(data: BlogSeoSettings): Promise<void> 
       blog_hero_heading = EXCLUDED.blog_hero_heading,
       blog_hero_subheading = EXCLUDED.blog_hero_subheading,
       blog_empty_state_text = EXCLUDED.blog_empty_state_text,
+      blog_cta_heading = EXCLUDED.blog_cta_heading,
+      blog_cta_body = EXCLUDED.blog_cta_body,
       blog_cta_button_text = EXCLUDED.blog_cta_button_text,
       blog_cta_button_href = EXCLUDED.blog_cta_button_href
   `;

@@ -64,8 +64,8 @@ export default async function BlogIndexPage({
         <section className="relative overflow-hidden bg-[#0B1B2B] text-white">
           <div className="absolute inset-0">
             <SafeImage
-              src={heroImage || "/images/hero-louvre.jpg"}
-              alt={heroImageAlt || "Museum interior"}
+              src={heroImage || "/images/hero-florence-duomo.jpg"}
+              alt={heroImageAlt || "Florence Duomo Cathedral"}
               fill
               priority
               sizes="100vw"
@@ -124,8 +124,8 @@ export default async function BlogIndexPage({
         <BlogIndexContainer
           posts={posts}
           emptyStateText={query ? "No guides matched your search." : settings.emptyStateText}
-          ctaHeading="Ready to Plan Your Museum Visit?"
-          ctaBody="Compare skip-the-line tickets and guided tours in one place."
+          ctaHeading={settings.ctaHeading}
+          ctaBody={settings.ctaBody}
           ctaButtonText={settings.ctaButtonText}
           ctaButtonHref={settings.ctaButtonHref}
         />

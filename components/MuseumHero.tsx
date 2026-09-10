@@ -65,12 +65,10 @@ export default function MuseumHero({
           {rating > 0 && (
             <span className="hidden h-3.5 w-px bg-white/30 sm:inline-block" aria-hidden="true" />
           )}
-          {museum.heroTrustBadge && (
-            <div className="flex items-center gap-1.5 text-xs font-semibold text-white sm:text-sm">
-              <ShieldCheckIcon className="h-4 w-4 text-white" />
-              <span>{museum.heroTrustBadge}</span>
-            </div>
-          )}
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-white sm:text-sm">
+            <ShieldCheckIcon className="h-4 w-4 text-white" />
+            <span>Verified Partner</span>
+          </div>
         </div>
 
         <Link

@@ -20,8 +20,8 @@ export async function generateMetadata({
   const match = posts.find((p) => categorySlug(p.category) === params.category);
   const categoryTitle = match?.category || params.category.replace(/-/g, " ");
   return {
-    title: `${categoryTitle} Articles - Visit Museums`,
-    description: `Browse all articles and guides in the ${categoryTitle} category on Visit Museums.`,
+    title: `${categoryTitle} Articles - Discover Florence`,
+    description: `Browse all articles and guides in the ${categoryTitle} category on Discover Florence.`,
     alternates: {
       canonical: resolveCanonical(`/category/${params.category}`),
     },

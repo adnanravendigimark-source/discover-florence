@@ -64,16 +64,14 @@ export default function Logo({
           {/* Duomo Florence Typography */}
           <div className="flex flex-col leading-none">
             <span
-              className={`font-serif text-[15px] sm:text-[17px] font-bold tracking-[0.14em] uppercase ${
-                isDark ? "text-white" : "text-[#143E38]"
-              }`}
+              className={`font-serif text-[15px] sm:text-[17px] font-bold tracking-[0.14em] uppercase ${isDark ? "text-white" : "text-[#143E38]"
+                }`}
             >
               DUOMO
             </span>
             <span
-              className={`font-serif text-[11px] sm:text-[12.5px] font-medium tracking-[0.24em] uppercase mt-0.5 ${
-                isDark ? "text-[#E5B573]" : "text-[#A07A48]"
-              }`}
+              className={`font-serif text-[11px] sm:text-[12.5px] font-medium tracking-[0.24em] uppercase mt-0.5 ${isDark ? "text-[#E5B573]" : "text-[#A07A48]"
+                }`}
             >
               FLORENCE
             </span>

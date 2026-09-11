@@ -14,7 +14,7 @@ export default async function FeaturedAttractions({
   subheading = "From Renaissance masterpieces to breathtaking architecture, discover the must-see experiences in Florence.",
 }: FeaturedAttractionsProps) {
   const allMuseums = await getMuseums();
-  
+
   // Top 3 featured attractions: Duomo Florence, Uffizi Gallery, Accademia Gallery
   const featured = allMuseums.slice(0, 3);
 
@@ -59,7 +59,7 @@ export default async function FeaturedAttractions({
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
-                
+
                 {/* Most Popular Badge on first card */}
                 {index === 0 && (
                   <span className="absolute top-4 left-4 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-[#143E38] shadow-md backdrop-blur-md">
@@ -75,10 +75,10 @@ export default async function FeaturedAttractions({
                     {museum.name === "Duomo Florence"
                       ? "Duomo Florence Tickets"
                       : museum.name === "Uffizi Gallery"
-                      ? "Uffizi Gallery Tickets"
-                      : museum.name === "Accademia Gallery"
-                      ? "Accademia Gallery Tickets"
-                      : `${museum.name} Tickets`}
+                        ? "Uffizi Gallery Tickets"
+                        : museum.name === "Accademia Gallery"
+                          ? "Accademia Gallery Tickets"
+                          : `${museum.name} Tickets`}
                   </h3>
                   <p className="mt-2 text-xs sm:text-sm leading-relaxed text-[#55605E] line-clamp-3">
                     {museum.cardTagline || museum.heroSubheading.replace(/<[^>]+>/g, "").trim()}

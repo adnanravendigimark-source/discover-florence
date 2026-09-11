@@ -8,8 +8,16 @@ import { getHomepageContent } from "@/lib/homepage";
 export default async function Header() {
   const content = await getHomepageContent();
   const header = content.header || {};
-  const ctaText = (header as any).buttonText || header.ctaText || header.bookNowText || "Explore Museums";
-  const ctaHref = (header as any).buttonHref || header.ctaHref || "/#museums";
+  // NOTE: this used to read a legacy (header as any).buttonText/.buttonHref
+  // fallback first. That legacy shape was written once by the old
+  // scripts/sync-content.mjs seed script and, because it was checked
+  // first, permanently shadowed real ctaText/ctaHref edits made from
+  // Homepage admin -> Navbar — an admin could change the button text/link
+  // there and see no effect on the live site. Fixed the same way as the
+  // sibling visit-museums repo: read the real fields directly, and
+  // saveSiteHeader() below now scrubs stray legacy keys on every save.
+  const ctaText = header.ctaText || header.bookNowText || "Explore Tickets";
+  const ctaHref = header.ctaHref || "/#attractions";
 
   // Every header nav link — including the museum ticket links and Contact,
   // if you add it — is a plain entry in header.navLinks, edited in

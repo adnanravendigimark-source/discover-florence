@@ -100,11 +100,11 @@ export default function SearchModal() {
 
   const filtered = query.trim()
     ? SEARCH_ITEMS.filter(
-        (item) =>
-          item.title.toLowerCase().includes(query.toLowerCase()) ||
-          item.subtitle.toLowerCase().includes(query.toLowerCase()) ||
-          item.category.toLowerCase().includes(query.toLowerCase())
-      )
+      (item) =>
+        item.title.toLowerCase().includes(query.toLowerCase()) ||
+        item.subtitle.toLowerCase().includes(query.toLowerCase()) ||
+        item.category.toLowerCase().includes(query.toLowerCase())
+    )
     : SEARCH_ITEMS.slice(0, 6);
 
   return (

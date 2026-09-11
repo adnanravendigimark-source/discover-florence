@@ -214,6 +214,38 @@ async function createTables() {
   `;
   await sql`CREATE INDEX IF NOT EXISTS museum_faqs_museum_id_idx ON museum_faqs (museum_id)`;
 
+  // Other Attractions — admin-authored, managed per museum (exactly like
+  // museum_tours above): each row belongs to exactly one museum, added and
+  // edited from that museum's own "Manage Other Attractions" screen (see
+  // lib/otherAttractions.ts and /admin/attractions/[museumId]). Replaces
+  // the old simple inline other_attractions_json list (still readable on
+  // the `museums` table, never dropped, per this file's migration policy —
+  // just no longer written to).
+  await sql`
+    CREATE TABLE IF NOT EXISTS other_attractions (
+      id TEXT PRIMARY KEY,
+      museum_id TEXT NOT NULL REFERENCES museums(id) ON DELETE CASCADE,
+      badge TEXT,
+      ribbon TEXT,
+      title TEXT NOT NULL,
+      description TEXT NOT NULL DEFAULT '',
+      includes JSONB NOT NULL DEFAULT '[]',
+      duration TEXT,
+      rating NUMERIC(2, 1) NOT NULL DEFAULT 5.0,
+      reviews INTEGER NOT NULL DEFAULT 0,
+      price NUMERIC(10, 2) NOT NULL DEFAULT 0,
+      original_price NUMERIC(10, 2),
+      image TEXT NOT NULL DEFAULT '',
+      image_alt TEXT NOT NULL DEFAULT '',
+      href_path TEXT NOT NULL DEFAULT '',
+      href_extra TEXT,
+      sort_order INTEGER NOT NULL DEFAULT 0,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+      updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    )
+  `;
+  await sql`CREATE INDEX IF NOT EXISTS other_attractions_museum_id_idx ON other_attractions (museum_id)`;
+
   await sql`
     CREATE TABLE IF NOT EXISTS posts (
       slug TEXT PRIMARY KEY,

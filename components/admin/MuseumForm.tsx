@@ -10,7 +10,7 @@ import SeoPreview from "./SeoPreview";
 import CharCounter from "./CharCounter";
 import SaveBar from "./SaveBar";
 import { useToast } from "./Toast";
-import type { Museum, HighlightCard, HoursRow, TourRecord, OtherAttraction } from "@/lib/museums";
+import type { Museum, HighlightCard, HoursRow, TourRecord } from "@/lib/museums";
 
 const inputClass =
   "w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-canal-blue focus:outline-none focus:ring-1 focus:ring-canal-blue";
@@ -21,7 +21,11 @@ const hintClass = "mt-1 text-xs text-stone-500";
 // appear on the live museum page (hero → tickets → highlights → practical
 // info → price table → other attractions → FAQ → CTA), with the
 // non-visual identity/SEO/social sections bookending the flow. Powers both
-// the "Jump to section" quick nav and each card's default open/closed state.
+// the "Jump to section" quick nav and each card's default open/closed
+// state. Other Attractions here is just a summary card + link — the
+// attractions themselves are managed on their own screen (see
+// /admin/attractions/[museumId]), same relationship as Tickets Section
+// has with Tours & Tickets.
 const SECTIONS = [
   { id: "sec-basics", label: "Museum Basics" },
   { id: "sec-card", label: "Homepage Grid Card" },
@@ -30,7 +34,7 @@ const SECTIONS = [
   { id: "sec-highlights", label: "Highlights & About" },
   { id: "sec-practical", label: "Practical Info" },
   { id: "sec-price", label: "Price Comparison Table" },
-  { id: "sec-other-attractions", label: "Other Attractions" },
+  { id: "sec-attractions", label: "Other Attractions" },
   { id: "sec-faq", label: "FAQ Section" },
   { id: "sec-cta", label: "Bottom CTA Banner" },
   { id: "sec-seo", label: "SEO" },
@@ -102,10 +106,12 @@ export default function MuseumForm({
   initial,
   isNew,
   tours = [],
+  otherAttractionsCount = 0,
 }: {
   initial: Museum;
   isNew: boolean;
   tours?: TourRecord[];
+  otherAttractionsCount?: number;
 }) {
   const router = useRouter();
   const { showToast } = useToast();
@@ -538,65 +544,30 @@ export default function MuseumForm({
 
       {/* ---------------- OTHER ATTRACTIONS ---------------- */}
       <SectionCard
-        id="sec-other-attractions"
+        id="sec-attractions"
         title="Other Attractions"
-        description="A hand-picked list of other things to do near this museum — name, category label, photo, and where each card links, all typed in here. Nothing is looked up automatically; save this the same way as every other field below."
-        open={!!openSections["sec-other-attractions"]}
-        onToggle={() => toggleSection("sec-other-attractions")}
+        description={`Extra attraction cards shown right below this museum's own Tours & Tickets — same card style, hand-picked and managed per museum, e.g. other things to do in ${museum.city || "this city"}.`}
+        open={!!openSections["sec-attractions"]}
+        onToggle={() => toggleSection("sec-attractions")}
       >
-        <Field label="Section heading" hint={`Shown above the cards. Leave blank to use the default, "Other Top Attractions in Florence".`}>
-          <input
-            value={museum.otherAttractionsHeading}
-            onChange={(e) => update("otherAttractionsHeading", e.target.value)}
-            className={inputClass}
-            placeholder="Other Top Attractions in Florence"
-          />
-        </Field>
-        <Field label="Attractions">
-          <RepeatableList<OtherAttraction>
-            items={museum.otherAttractions}
-            onChange={(otherAttractions) => update("otherAttractions", otherAttractions)}
-            newItem={() => ({ name: "", category: "", image: "", imageAlt: "", href: "" })}
-            addLabel="+ Add attraction"
-            emptyLabel="Nothing added yet — this section stays hidden on the public page until at least one attraction is added."
-            renderItem={(attraction, upd) => (
-              <div className="space-y-2.5">
-                <div className="grid gap-2 sm:grid-cols-2">
-                  <input
-                    value={attraction.name}
-                    onChange={(e) => upd({ ...attraction, name: e.target.value })}
-                    placeholder="Name (e.g. Uffizi Gallery)"
-                    className={inputClass}
-                  />
-                  <input
-                    value={attraction.category}
-                    onChange={(e) => upd({ ...attraction, category: e.target.value })}
-                    placeholder="Category badge (e.g. Museum, Landmark)"
-                    className={inputClass}
-                  />
-                </div>
-                <ImageUploadField
-                  label="Photo"
-                  value={attraction.image}
-                  onChange={(url) => upd({ ...attraction, image: url })}
-                  aspectRatio={16 / 10}
-                />
-                <input
-                  value={attraction.imageAlt}
-                  onChange={(e) => upd({ ...attraction, imageAlt: e.target.value })}
-                  placeholder="Photo alt text"
-                  className={inputClass}
-                />
-                <input
-                  value={attraction.href}
-                  onChange={(e) => upd({ ...attraction, href: e.target.value })}
-                  placeholder="Where the card links (e.g. a GetYourGuide/booking URL)"
-                  className={inputClass}
-                />
-              </div>
-            )}
-          />
-        </Field>
+        <div className="flex items-center justify-between gap-4 rounded-xl border border-stone-200 bg-stone-50 p-4">
+          <div>
+            <p className="text-sm font-semibold text-stone-900">
+              {otherAttractionsCount} {otherAttractionsCount === 1 ? "attraction" : "attractions"} for this museum
+            </p>
+            <p className="mt-0.5 text-xs text-stone-500">Edit title, description, image, price, and booking link per attraction.</p>
+          </div>
+          {isNew ? (
+            <span className="shrink-0 text-xs text-stone-400">Save this museum first</span>
+          ) : (
+            <Link
+              href={`/admin/attractions/${museum.id}`}
+              className="shrink-0 rounded-lg border border-stone-300 bg-white px-3 py-1.5 text-xs font-medium text-stone-700 transition hover:bg-stone-50"
+            >
+              Manage Other Attractions →
+            </Link>
+          )}
+        </div>
       </SectionCard>
 
       {/* ---------------- FAQ SECTION ---------------- */}

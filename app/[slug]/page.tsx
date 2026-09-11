@@ -191,7 +191,12 @@ export default async function SlugPage({ params }: { params: { slug: string } })
           <MuseumHighlights museum={museum} />
           <MuseumPracticalInfo museum={museum} />
           <MuseumPriceComparison museum={museum} />
-          <OtherAttractionsSection attractions={museum.otherAttractions} heading={museum.otherAttractionsHeading} />
+          <OtherAttractionsSection
+            museumId={museum.id}
+            city={museum.city}
+            currencySymbol={museum.currencySymbol}
+            bookNowText={bookNowText}
+          />
           <MuseumFaqSection museum={museum} />
           <CtaBanner
             heading={museum.ctaHeading}

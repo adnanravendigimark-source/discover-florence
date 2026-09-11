@@ -468,9 +468,22 @@ export async function saveHomepageSections(sections: HomepageSections): Promise<
 }
 
 export async function saveSiteHeader(header: HeaderContent): Promise<void> {
+  // Rebuild a clean HeaderContent object rather than spreading whatever the
+  // client sent as-is — scrubs stray legacy keys (buttonText, buttonHref,
+  // searchPlaceholder, etc., from the old scripts/sync-content.mjs seed)
+  // off the record on every save, so they can never again shadow ctaText /
+  // ctaHref for an admin editing the Navbar section.
+  const clean: HeaderContent = {
+    logoImage: header.logoImage || "",
+    logoAlt: header.logoAlt || "",
+    bookNowText: header.bookNowText || "",
+    navLinks: header.navLinks || [],
+    ctaText: header.ctaText || "",
+    ctaHref: header.ctaHref || "",
+  };
   await sql`
     INSERT INTO homepage (id, header_json)
-    VALUES (1, ${JSON.stringify(header)}::jsonb)
+    VALUES (1, ${JSON.stringify(clean)}::jsonb)
     ON CONFLICT (id) DO UPDATE SET header_json = EXCLUDED.header_json
   `;
 }

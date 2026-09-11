@@ -39,11 +39,10 @@ export default function HeaderNav({ links }: { links?: NavLink[] }) {
           <Link
             key={link.href + link.label}
             href={link.href}
-            className={`relative py-7 text-[13px] xl:text-[14px] 2xl:text-[14.5px] font-medium tracking-normal whitespace-nowrap transition-colors ${
-              isActive
+            className={`relative py-7 text-[13px] xl:text-[14px] 2xl:text-[14.5px] font-medium tracking-normal whitespace-nowrap transition-colors ${isActive
                 ? "text-[#184E3A] font-bold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[3.5px] after:bg-[#184E3A] after:rounded-t-sm"
                 : "text-[#2A302F] hover:text-[#184E3A] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:h-[3.5px] hover:after:bg-[#184E3A] hover:after:rounded-t-sm"
-            }`}
+              }`}
           >
             {link.label}
           </Link>

@@ -59,11 +59,11 @@ export default async function Hero() {
     content.heroFeatures && content.heroFeatures.length > 0
       ? content.heroFeatures
       : [
-          { title: "Best Florence Attractions", subtitle: "Top-rated experiences" },
-          { title: "Skip-the-Line Tickets", subtitle: "Save time, enjoy more" },
-          { title: "Expert Travel Guides", subtitle: "Local knowledge" },
-          { title: "Easy Booking", subtitle: "Secure & flexible" },
-        ];
+        { title: "Best Florence Attractions", subtitle: "Top-rated experiences" },
+        { title: "Skip-the-Line Tickets", subtitle: "Save time, enjoy more" },
+        { title: "Expert Travel Guides", subtitle: "Local knowledge" },
+        { title: "Easy Booking", subtitle: "Secure & flexible" },
+      ];
 
   return (
     <section className="relative h-[100svh] max-h-[760px] min-h-[520px] w-full overflow-hidden bg-white">

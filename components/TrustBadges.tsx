@@ -54,10 +54,10 @@ export default async function TrustBadges() {
 
   const displayBadges = features.length >= 4
     ? features.map((f, i) => ({
-        icon: DEFAULT_BADGES[i % DEFAULT_BADGES.length].icon,
-        title: f.title,
-        subtitle: f.subtitle,
-      }))
+      icon: DEFAULT_BADGES[i % DEFAULT_BADGES.length].icon,
+      title: f.title,
+      subtitle: f.subtitle,
+    }))
     : DEFAULT_BADGES;
 
   return (

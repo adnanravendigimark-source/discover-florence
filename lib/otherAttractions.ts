@@ -1,4 +1,7 @@
-import { cache } from "react";
+// cache() was removed from the exports below — see the note in
+// lib/museums.ts for why: these functions are also called from Route
+// Handlers, where cache()'s per-request memoization is not reliable and
+// caused stale reads after admin writes.
 import { sql } from "./db";
 import { gygLink, type Tour } from "./museums";
 
@@ -106,7 +109,7 @@ async function getOtherAttractionsRawByMuseumImpl(museumId: string): Promise<Oth
     return [];
   }
 }
-export const getOtherAttractionsByMuseum = cache(getOtherAttractionsRawByMuseumImpl);
+export const getOtherAttractionsByMuseum = getOtherAttractionsRawByMuseumImpl;
 
 // Every attraction across every museum, each labeled with its museum's
 // name/city/country — used by the admin hub page (/admin/attractions) to
@@ -120,7 +123,7 @@ async function getAllOtherAttractionsImpl(): Promise<OtherAttractionRecord[]> {
     return [];
   }
 }
-export const getAllOtherAttractions = cache(getAllOtherAttractionsImpl);
+export const getAllOtherAttractions = getAllOtherAttractionsImpl;
 
 async function getOtherAttractionByIdImpl(id: string): Promise<OtherAttractionRecord | null> {
   try {
@@ -131,7 +134,7 @@ async function getOtherAttractionByIdImpl(id: string): Promise<OtherAttractionRe
   }
   return null;
 }
-export const getOtherAttractionById = cache(getOtherAttractionByIdImpl);
+export const getOtherAttractionById = getOtherAttractionByIdImpl;
 
 export async function insertOtherAttraction(museumId: string, a: OtherAttractionRecord): Promise<void> {
   const [{ count }] = await sql`SELECT count(*)::int AS count FROM other_attractions WHERE museum_id = ${museumId}`;

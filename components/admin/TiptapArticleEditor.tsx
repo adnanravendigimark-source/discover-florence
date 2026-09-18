@@ -13,7 +13,7 @@ import TableRow from "@tiptap/extension-table-row";
 import TableHeader from "@tiptap/extension-table-header";
 import TableCell from "@tiptap/extension-table-cell";
 import { Node, mergeAttributes } from "@tiptap/core";
-import { DOMParser as PMDOMParser } from "@tiptap/pm/model";
+import { DOMParser as PMDOMParser, Slice } from "@tiptap/pm/model";
 import RichImageModal, { ImageModalData } from "./RichImageModal";
 import RichLinkModal from "./RichLinkModal";
 
@@ -388,6 +388,29 @@ export default function TiptapArticleEditor({
           return html;
         }
       },
+      // transformPastedHTML above returns an HTML *string* — ProseMirror
+      // still does its own default parsing of that string into a Slice,
+      // inferring open start/end boundaries the normal way. For a lone
+      // block like a single converted <h2> (no sibling paragraph in the
+      // pasted fragment), that inference can leave the slice "open",
+      // which merges the heading straight into whatever paragraph text
+      // follows the cursor instead of inserting it as its own block — the
+      // same class of bug handlePaste's Slice(..., 0, 0) fixes below, but
+      // for HTML paste rather than plain-text markdown paste. This forces
+      // closed boundaries specifically when the pasted content's outer
+      // nodes are block types that should never silently absorb
+      // surrounding text (heading/list/table); ordinary paragraph or
+      // inline pastes are left alone since merging into the surrounding
+      // paragraph is the correct, expected behavior there.
+      transformPasted(slice: any) {
+        const neverMerge = new Set(["heading", "bulletList", "orderedList", "table"]);
+        const first = slice.content.firstChild;
+        const last = slice.content.lastChild;
+        if (first && last && neverMerge.has(first.type.name) && neverMerge.has(last.type.name)) {
+          return new Slice(slice.content, 0, 0);
+        }
+        return slice;
+      },
       // Plain-text markdown paste (no HTML on the clipboard at all — e.g.
       // copied from a chat message, a .md file, or a plain text editor):
       // a markdown table like "| Season | Item |" / "|---|---|" has no
@@ -409,7 +432,17 @@ export default function TiptapArticleEditor({
 
         const el = document.createElement("div");
         el.innerHTML = generated;
-        const slice = PMDOMParser.fromSchema(view.state.schema).parseSlice(el);
+        // parseSlice() infers open start/end boundaries from the parsed
+        // content, which for block content (a table, a heading) can merge
+        // it into whatever paragraph happens to follow the cursor instead
+        // of inserting it as its own clean block — e.g. pasting a table in
+        // the middle of an article could silently absorb the next
+        // paragraph's text into the table's last cell. Building a fully
+        // closed Slice (openStart/openEnd = 0) from parse() instead
+        // guarantees the generated blocks are inserted intact, with no
+        // merging into surrounding content.
+        const parsedNode = PMDOMParser.fromSchema(view.state.schema).parse(el);
+        const slice = new Slice(parsedNode.content, 0, 0);
         view.dispatch(view.state.tr.replaceSelection(slice).scrollIntoView());
         return true;
       },

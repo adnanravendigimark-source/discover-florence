@@ -162,7 +162,7 @@ export const DEFAULT_HEADER: HeaderContent = {
 
 export const DEFAULT_FOOTER: FooterContent = {
   tagline:
-    "<strong>Discover Florence | Duomo Florence</strong> — Your independent guide to Florence's most iconic attractions, world-class Renaissance museums, skip-the-line tickets, and expert guided tours.",
+    "<strong>Discover Florence</strong> — Your independent guide to Florence's most iconic attractions, world-class Renaissance museums, skip-the-line tickets, and expert guided tours.",
   columns: [
     {
       title: "Top Attractions",
@@ -300,16 +300,16 @@ const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
   header: DEFAULT_HEADER,
   footer: DEFAULT_FOOTER,
   theme: DEFAULT_THEME,
-  metaTitle: "Discover Florence | Duomo Florence Tickets & City Guide",
+  metaTitle: "Discover Florence | Duomo Tickets & Florence City Guide",
   metaDescription:
-    "Discover Florence | Duomo Florence — Book verified skip-the-line tickets for the Duomo Dome climb, Uffizi Gallery, and Accademia Michelangelo's David.",
-  focusKeyword: "Discover Florence | Duomo Florence",
+    "Discover Florence — Book verified skip-the-line tickets for the Duomo Dome climb, Uffizi Gallery, and Accademia Michelangelo's David.",
+  focusKeyword: "Discover Florence",
   noIndex: false,
   noFollow: false,
   canonicalUrl: "",
-  ogTitle: "Discover Florence | Duomo Florence Tickets & City Guide",
+  ogTitle: "Discover Florence | Duomo Tickets & Florence City Guide",
   ogDescription:
-    "Discover Florence | Duomo Florence — Book verified skip-the-line tickets for the Duomo Dome climb, Uffizi Gallery, and Accademia Michelangelo's David.",
+    "Discover Florence — Book verified skip-the-line tickets for the Duomo Dome climb, Uffizi Gallery, and Accademia Michelangelo's David.",
   ogImage: "https://images.unsplash.com/photo-1541370976299-4d20eb3460f6?q=80&w=1600&auto=format&fit=crop",
 };
 

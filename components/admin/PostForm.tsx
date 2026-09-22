@@ -456,7 +456,7 @@ export default function PostForm({
                   value={post.focusKeyword}
                   onChange={(e) => update("focusKeyword", e.target.value)}
                   className={inputClass}
-                  placeholder="e.g. Discover Florence | Duomo Florence"
+                  placeholder="e.g. Discover Florence | Duomo Tickets"
                 />
               </Field>
               {focusChecklist && (

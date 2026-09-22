@@ -46,13 +46,13 @@ const DEFAULT_CONTACT: ContactPageContent = {
     "Already booked? Please refer to your confirmation voucher from the ticketing partner to contact your tour provider directly for real-time meeting point directions or schedule changes.",
   ctaHeading: "Ready to explore Florence?",
   ctaButtonLabel: "Compare Florence Tickets & Tours",
-  metaTitle: "Contact Us | Discover Florence | Duomo Florence",
+  metaTitle: "Contact Us | Discover Florence",
   metaDescription:
     "Questions about Duomo tickets, Brunelleschi Dome climb, Uffizi Gallery, or planning your Florence visit? Contact Discover Florence.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,
-  ogTitle: "Contact Us | Discover Florence | Duomo Florence",
+  ogTitle: "Contact Us | Discover Florence",
   ogDescription:
     "Questions about Duomo tickets, Brunelleschi Dome climb, Uffizi Gallery, or planning your Florence visit? Contact Discover Florence.",
   ogImage: "https://images.unsplash.com/photo-1541370976299-4d20eb3460f6?q=80&w=1600&auto=format&fit=crop",

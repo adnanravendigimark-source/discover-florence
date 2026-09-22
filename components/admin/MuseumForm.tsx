@@ -642,7 +642,7 @@ export default function MuseumForm({
 
         <div className="border-t border-stone-100 pt-5">
           <Field label="Focus keyword">
-            <input value={museum.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Discover Florence | Duomo Florence" />
+            <input value={museum.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Discover Florence | Duomo Tickets" />
           </Field>
         </div>
         {focusChecklist && (

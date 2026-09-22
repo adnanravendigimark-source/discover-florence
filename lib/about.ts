@@ -35,13 +35,13 @@ const DEFAULT_ABOUT: AboutPageContent = {
 <li><strong>Affiliate Transparency</strong> — We partner with reputable ticketing providers (like GetYourGuide and Tiqets) and may earn a small commission at no additional cost to you.</li>
 </ul>
 <p>Have questions about planning your Florence adventure? <a href="/contact">Reach out to our editorial team</a>.</p>`,
-  metaTitle: "About Us | Discover Florence | Duomo Florence",
+  metaTitle: "About Us | Discover Florence",
   metaDescription:
     "Learn about Discover Florence: our mission, curation standards, and independent guide to Duomo tickets, Uffizi Gallery, and Florence attractions.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,
-  ogTitle: "About Us | Discover Florence | Duomo Florence",
+  ogTitle: "About Us | Discover Florence",
   ogDescription:
     "Learn about Discover Florence: our mission, curation standards, and independent guide to Duomo tickets, Uffizi Gallery, and Florence attractions.",
   ogImage: "https://images.unsplash.com/photo-1541370976299-4d20eb3460f6?q=80&w=1600&auto=format&fit=crop",

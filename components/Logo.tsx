@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Logo({
   logoImage = "",
-  logoAlt = "DUOMO FLORENCE",
+  logoAlt = "DISCOVER FLORENCE",
   theme = "light",
   className = "",
 }: {
@@ -16,7 +16,7 @@ export default function Logo({
   const customSrc = logoImage?.trim();
 
   return (
-    <Link href="/" className={`inline-flex items-center gap-3 shrink-0 ${className}`} aria-label="Discover Florence - Duomo Florence Home">
+    <Link href="/" className={`inline-flex items-center gap-3 shrink-0 ${className}`} aria-label="Discover Florence Home">
       {customSrc ? (
         <span className="relative block h-10 w-44 sm:h-12 sm:w-52 shrink-0 transition-opacity hover:opacity-90">
           <Image
@@ -61,13 +61,13 @@ export default function Logo({
             </svg>
           </div>
 
-          {/* Duomo Florence Typography */}
+          {/* Discover Florence Typography */}
           <div className="flex flex-col leading-none">
             <span
               className={`font-serif text-[15px] sm:text-[17px] font-bold tracking-[0.14em] uppercase ${isDark ? "text-white" : "text-[#143E38]"
                 }`}
             >
-              DUOMO
+              DISCOVER
             </span>
             <span
               className={`font-serif text-[11px] sm:text-[12.5px] font-medium tracking-[0.24em] uppercase mt-0.5 ${isDark ? "text-[#E5B573]" : "text-[#A07A48]"

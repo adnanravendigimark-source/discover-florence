@@ -750,7 +750,7 @@ export default function HomepageForm({ initial }: { initial: HomepageContent }) 
         <div className="space-y-5">
           <SectionCard title="Focus keyword" description="The main phrase you want the homepage to rank for. Purely a writing aid — nothing here is sent to Google.">
             <Field label="Focus keyword">
-              <input value={content.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Discover Florence | Duomo Florence" />
+              <input value={content.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Discover Florence | Duomo Tickets" />
             </Field>
             {focusChecklist && (
               <ul className="space-y-1.5 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm">

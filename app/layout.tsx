@@ -44,7 +44,7 @@ const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Discover Florence | Duomo Florence",
+  name: "Discover Florence",
   url: SITE_URL,
   logo: `${SITE_URL}/images/hero-duomo.jpg`,
   description:
@@ -54,7 +54,7 @@ const organizationJsonLd = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Discover Florence | Duomo Florence",
+  name: "Discover Florence",
   url: SITE_URL,
   potentialAction: {
     "@type": "SearchAction",
@@ -69,11 +69,11 @@ export function generateMetadata(): Metadata {
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      default: "Discover Florence | Duomo Florence Tickets & City Guide",
+      default: "Discover Florence | Duomo Tickets & Florence City Guide",
       template: "%s | Discover Florence",
     },
     description:
-      "Discover Florence | Duomo Florence — Book verified skip-the-line tickets for the Duomo Dome climb, Uffizi Gallery, and Accademia Michelangelo's David.",
+      "Discover Florence — Book verified skip-the-line tickets for the Duomo Dome climb, Uffizi Gallery, and Accademia Michelangelo's David.",
     keywords: [
       FOCUS_KEYWORD,
       "Duomo Florence",
@@ -89,9 +89,9 @@ export function generateMetadata(): Metadata {
     },
     robots,
     openGraph: {
-      title: "Discover Florence | Duomo Florence Tickets & City Guide",
+      title: "Discover Florence | Duomo Tickets & Florence City Guide",
       description:
-        "Discover Florence | Duomo Florence — Book verified skip-the-line tickets for the Duomo Dome climb, Uffizi Gallery, and Accademia Michelangelo's David.",
+        "Discover Florence — Book verified skip-the-line tickets for the Duomo Dome climb, Uffizi Gallery, and Accademia Michelangelo's David.",
       type: "website",
       url: SITE_URL,
       siteName: "Discover Florence",
@@ -106,9 +106,9 @@ export function generateMetadata(): Metadata {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Discover Florence | Duomo Florence Tickets & City Guide",
+      title: "Discover Florence | Duomo Tickets & Florence City Guide",
       description:
-        "Discover Florence | Duomo Florence — Book verified skip-the-line tickets for the Duomo Dome climb, Uffizi Gallery, and Accademia Michelangelo's David.",
+        "Discover Florence — Book verified skip-the-line tickets for the Duomo Dome climb, Uffizi Gallery, and Accademia Michelangelo's David.",
       images: [DEFAULT_OG_IMAGE],
     },
   };

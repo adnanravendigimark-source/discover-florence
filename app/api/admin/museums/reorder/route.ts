@@ -1,3 +1,4 @@
+import { withSiteRevalidate } from "@/lib/revalidateSite";
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { reorderMuseums } from "@/lib/museums";
@@ -5,7 +6,7 @@ import { dbErrorMessage } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
-export async function PUT(req: Request) {
+async function PUTHandler(req: Request) {
   const body = (await req.json().catch(() => null)) as { orderedIds?: string[] } | null;
   if (!body || !Array.isArray(body.orderedIds)) {
     return NextResponse.json({ error: "Expected { orderedIds: string[] }." }, { status: 400 });
@@ -20,3 +21,5 @@ export async function PUT(req: Request) {
   revalidatePath("/");
   return NextResponse.json({ ok: true });
 }
+
+export const PUT = withSiteRevalidate(PUTHandler);

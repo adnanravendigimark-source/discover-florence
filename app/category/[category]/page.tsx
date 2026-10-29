@@ -11,6 +11,14 @@ import { resolveRobots, resolveCanonical } from "@/lib/seo";
 // revalidatePath in the Posts admin save routes. See app/layout.tsx's
 // removed force-dynamic export for why.
 
+// Empty list = nothing prebuilt at deploy time; each page is rendered on its
+// first request, then served from cache until an admin save purges it.
+// Without this export Next 14 renders the route dynamically (a Neon query on
+// every hit).
+export async function generateStaticParams() {
+  return [];
+}
+
 export async function generateMetadata({
   params,
 }: {

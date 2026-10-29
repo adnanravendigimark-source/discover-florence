@@ -1,3 +1,4 @@
+import { withSiteRevalidate } from "@/lib/revalidateSite";
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { getMuseumById } from "@/lib/museums";
@@ -14,7 +15,7 @@ export async function GET(_req: Request, { params }: { params: { museumId: strin
   return NextResponse.json(attraction);
 }
 
-export async function PUT(req: Request, { params }: { params: { museumId: string; attractionId: string } }) {
+async function PUTHandler(req: Request, { params }: { params: { museumId: string; attractionId: string } }) {
   const museum = await getMuseumById(params.museumId);
   if (!museum) return NextResponse.json({ error: "Museum not found." }, { status: 404 });
 
@@ -38,7 +39,7 @@ export async function PUT(req: Request, { params }: { params: { museumId: string
   return NextResponse.json({ ok: true });
 }
 
-export async function DELETE(_req: Request, { params }: { params: { museumId: string; attractionId: string } }) {
+async function DELETEHandler(_req: Request, { params }: { params: { museumId: string; attractionId: string } }) {
   const museum = await getMuseumById(params.museumId);
   if (!museum) return NextResponse.json({ error: "Museum not found." }, { status: 404 });
 
@@ -56,3 +57,6 @@ export async function DELETE(_req: Request, { params }: { params: { museumId: st
   revalidatePath(`/${museum.slug}`);
   return NextResponse.json({ ok: true });
 }
+
+export const PUT = withSiteRevalidate(PUTHandler);
+export const DELETE = withSiteRevalidate(DELETEHandler);

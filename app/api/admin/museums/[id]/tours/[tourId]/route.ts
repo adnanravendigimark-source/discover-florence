@@ -1,3 +1,4 @@
+import { withSiteRevalidate } from "@/lib/revalidateSite";
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { getMuseumById, getToursRawByMuseum, updateTourRecord, deleteTour, type TourRecord } from "@/lib/museums";
@@ -12,7 +13,7 @@ export async function GET(_req: Request, { params }: { params: { id: string; tou
   return NextResponse.json(tour);
 }
 
-export async function PUT(req: Request, { params }: { params: { id: string; tourId: string } }) {
+async function PUTHandler(req: Request, { params }: { params: { id: string; tourId: string } }) {
   const museum = await getMuseumById(params.id);
   if (!museum) return NextResponse.json({ error: "Museum not found." }, { status: 404 });
 
@@ -34,7 +35,7 @@ export async function PUT(req: Request, { params }: { params: { id: string; tour
   return NextResponse.json({ ok: true });
 }
 
-export async function DELETE(_req: Request, { params }: { params: { id: string; tourId: string } }) {
+async function DELETEHandler(_req: Request, { params }: { params: { id: string; tourId: string } }) {
   const session = await getSession();
   if (!session || session.role !== "admin") {
     return NextResponse.json({ error: "Only admins can delete." }, { status: 403 });
@@ -57,3 +58,6 @@ export async function DELETE(_req: Request, { params }: { params: { id: string; 
   revalidatePath(`/${museum.slug}`);
   return NextResponse.json({ ok: true });
 }
+
+export const PUT = withSiteRevalidate(PUTHandler);
+export const DELETE = withSiteRevalidate(DELETEHandler);

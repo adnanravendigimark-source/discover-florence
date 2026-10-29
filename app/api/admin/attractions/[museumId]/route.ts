@@ -1,3 +1,4 @@
+import { withSiteRevalidate } from "@/lib/revalidateSite";
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { getMuseumById } from "@/lib/museums";
@@ -10,7 +11,7 @@ export async function GET(_req: Request, { params }: { params: { museumId: strin
   return NextResponse.json(await getOtherAttractionsByMuseum(params.museumId));
 }
 
-export async function POST(req: Request, { params }: { params: { museumId: string } }) {
+async function POSTHandler(req: Request, { params }: { params: { museumId: string } }) {
   const museum = await getMuseumById(params.museumId);
   if (!museum) return NextResponse.json({ error: "Museum not found." }, { status: 404 });
 
@@ -33,3 +34,5 @@ export async function POST(req: Request, { params }: { params: { museumId: strin
   revalidatePath(`/${museum.slug}`);
   return NextResponse.json({ ok: true });
 }
+
+export const POST = withSiteRevalidate(POSTHandler);

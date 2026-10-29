@@ -1,3 +1,4 @@
+import { withSiteRevalidate } from "@/lib/revalidateSite";
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import {
@@ -31,7 +32,7 @@ export async function GET() {
 // why that split exists. Unlike the single-attraction reference repos,
 // there is no heroVideo field and no per-tour featured_tour_* columns —
 // each museum owns its own tours in lib/museums.ts instead.
-export async function PUT(req: Request) {
+async function PUTHandler(req: Request) {
   // Whole handler wrapped in one try/catch — not just the DB call — so a
   // malformed body or any unexpected error still comes back as a real JSON
   // error the admin UI can show, instead of a platform error page that
@@ -81,3 +82,5 @@ export async function PUT(req: Request) {
     return NextResponse.json({ error: dbErrorMessage(err) }, { status: 500 });
   }
 }
+
+export const PUT = withSiteRevalidate(PUTHandler);

@@ -1,3 +1,4 @@
+import { withSiteRevalidate } from "@/lib/revalidateSite";
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { getMuseums, insertMuseum, type Museum } from "@/lib/museums";
@@ -12,7 +13,7 @@ export async function GET() {
   return NextResponse.json(await getMuseums());
 }
 
-export async function POST(req: Request) {
+async function POSTHandler(req: Request) {
   const body = (await req.json().catch(() => null)) as Museum | null;
   if (!body || !body.id || !body.slug || !body.name) {
     return NextResponse.json({ error: "ID, slug, and name are required." }, { status: 400 });
@@ -38,3 +39,5 @@ export async function POST(req: Request) {
   revalidatePath("/sitemap.xml");
   return NextResponse.json({ ok: true, id: body.id });
 }
+
+export const POST = withSiteRevalidate(POSTHandler);

@@ -1,3 +1,4 @@
+import { withSiteRevalidate } from "@/lib/revalidateSite";
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { getMuseumById, getMuseums, updateMuseum, deleteMuseum, type Museum } from "@/lib/museums";
@@ -12,7 +13,7 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
   return NextResponse.json(museum);
 }
 
-export async function PUT(req: Request, { params }: { params: { id: string } }) {
+async function PUTHandler(req: Request, { params }: { params: { id: string } }) {
   const body = (await req.json().catch(() => null)) as Museum | null;
   if (!body) return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
 
@@ -42,7 +43,7 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
   return NextResponse.json({ ok: true });
 }
 
-export async function DELETE(_req: Request, { params }: { params: { id: string } }) {
+async function DELETEHandler(_req: Request, { params }: { params: { id: string } }) {
   const session = await getSession();
   if (!session || session.role !== "admin") {
     return NextResponse.json({ error: "Only admins can delete." }, { status: 403 });
@@ -62,3 +63,6 @@ export async function DELETE(_req: Request, { params }: { params: { id: string }
 
   return NextResponse.json({ ok: true });
 }
+
+export const PUT = withSiteRevalidate(PUTHandler);
+export const DELETE = withSiteRevalidate(DELETEHandler);

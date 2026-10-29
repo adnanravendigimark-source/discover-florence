@@ -14,7 +14,7 @@ import { getMuseums } from "@/lib/museums";
 // force-dynamic here meant a full DB fan-out (7 queries) on every crawler
 // hit. A 1-hour revalidate is also set as a safety net in case some
 // content change doesn't yet call revalidatePath("/sitemap.xml").
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [homepage, policy, posts, blogSeo, about, contact, museums] = await Promise.all([

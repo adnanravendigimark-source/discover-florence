@@ -37,6 +37,14 @@ import { SITE_URL } from "@/lib/site";
 // revalidatePath in the museum/post save routes. See the comment on
 // app/layout.tsx's removed force-dynamic export.
 
+// Empty list = nothing prebuilt at deploy time; each page is rendered on its
+// first request, then served from cache until an admin save purges it.
+// Without this export Next 14 renders the route dynamically (a Neon query on
+// every hit).
+export async function generateStaticParams() {
+  return [];
+}
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const museum = await getMuseumBySlug(params.slug);
   if (museum) {

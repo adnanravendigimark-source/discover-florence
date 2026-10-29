@@ -1,3 +1,4 @@
+import { withSiteRevalidate } from "@/lib/revalidateSite";
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { getMuseumById, getFaqsByMuseum, saveFaqsForMuseum, type FAQ } from "@/lib/museums";
@@ -9,7 +10,7 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
   return NextResponse.json(await getFaqsByMuseum(params.id));
 }
 
-export async function PUT(req: Request, { params }: { params: { id: string } }) {
+async function PUTHandler(req: Request, { params }: { params: { id: string } }) {
   const museum = await getMuseumById(params.id);
   if (!museum) return NextResponse.json({ error: "Museum not found." }, { status: 404 });
 
@@ -27,3 +28,5 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
   revalidatePath(`/${museum.slug}`);
   return NextResponse.json({ ok: true });
 }
+
+export const PUT = withSiteRevalidate(PUTHandler);
